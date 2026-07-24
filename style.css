@@ -1,0 +1,132 @@
+body {
+    background-color: #0A0A0A;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 65px;
+    gap: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: end;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 10px 13px;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    gap: 15px;
+    margin: 0;
+}
+
+nav ul li a:hover {
+    color: #03C5E4;
+    background-color: #333333;
+    border-radius: 10px;
+}
+
+.tareas {
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+div.tareas article {
+    padding: 60px 40px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    margin: 15px;
+    color: #707070;
+    width: 100%;
+    text-align: center;
+}
+
+.agenda {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px 15px;
+    margin-bottom: 15px;
+}
+
+.agenda h3 {
+    padding-bottom: 15px;
+}
+
+.agenda-item {
+    display: block;
+    background-color: #333333;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+.agenda-item:hover {
+    color: #03C5E4;
+    border: 1px solid #03C5E4;
+    cursor: pointer;
+}
+
+.agenda-item:active {
+    transform: scale(0.98);
+    color: #03C5E4;
+    border: 1px solid #03C5E4;
+}
+
+.manana {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px 15px;
+    margin-bottom: 25px;
+}
+
+.manana h3 {
+    padding-bottom: 15px;
+}
+
+.manana-item {
+    display: block;
+    background-color: #333333;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+.manana-item:hover {
+    color: #03C5E4;
+    border: 1px solid #03C5E4;
+    cursor: pointer;
+}
+
+.manana-item:active {
+    transform: scale(0.98);
+    color: #03C5E4;
+    border: 1px solid #03C5E4;
+}
