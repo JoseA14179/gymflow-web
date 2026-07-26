@@ -1,0 +1,44 @@
+@use '../base/variables' as *;
+
+nav {
+    ul {
+        display: flex;
+        margin-top: $spacing-s;
+        margin-bottom: $spacing-m;
+        margin-left: 0;
+        margin-right: 65px;
+        gap: $spacing-s;
+
+        li {
+            list-style: none;
+            text-align: end;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+
+            a {
+                text-decoration: none;
+                color: $color-text;
+                display: inline-block;
+                padding: $spacing-s;
+                align-self: center;
+                text-align: center;
+                width: 100%;
+                gap: $spacing-m;
+                margin: 0;
+
+                &:hover {
+                    color: $color-hover;
+                    background-color: $color-bg-card;
+                    border-radius: $radius-main;
+                }
+            }
+
+
+        }
+    }
+
+    
+
+
+}

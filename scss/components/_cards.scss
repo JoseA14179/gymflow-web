@@ -1,0 +1,38 @@
+@use '../base/variables' as *;
+
+.agenda, .manana {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-s;
+    border: $border-card;
+    border-radius: $radius-main;
+    padding: $spacing-l $spacing-m;
+    margin-bottom: $spacing-m;
+
+    h3 {
+        padding-bottom: $spacing-m;
+    }
+}
+
+
+.agenda-item, .manana-item {
+    display: block;
+    background-color: $color-bg-card;
+    gap: $spacing-s;
+    margin-bottom: $spacing-m;
+    padding: $spacing-m;
+    border: $border-card;
+    border-radius: $radius-main;
+
+    &:hover {
+        color: $color-hover;
+        border: $border-active;
+        cursor: pointer;
+    }
+
+    &:active {
+        transform: $scale-active;
+        color: $color-hover;
+        border: $border-active;
+    }
+}
