@@ -92,4 +92,85 @@ nav ul li a:hover {
   transform: scale(0.98);
   color: #03C5E4;
   border: 1px solid #03C5E4;
+}
+
+.inicio-clientes {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  justify-content: space-between;
+}
+.inicio-clientes h2 {
+  color: #FFFFFF;
+}
+.inicio-clientes h2 span {
+  color: #03C5E4;
+}
+.inicio-clientes button {
+  background-color: linear-gradient(to right, #00c6ff, #7f00ff);
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+}
+.inicio-clientes button:hover {
+  cursor: pointer;
+}
+
+.panel-clientes {
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin: 15px;
+  align-content: center;
+}
+.panel-clientes article {
+  padding: 60px 40px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  margin: 15px;
+  color: #707070;
+  width: 100%;
+  text-align: center;
+}
+
+.buscar-clientes {
+  margin: 15px;
+}
+.buscar-clientes input {
+  width: 100%;
+  display: inline;
+  background-color: transparent;
+  color: #FFFFFF;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.datos-clientes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding: 15px 5px;
+  margin-bottom: 15px;
+}
+.datos-clientes li {
+  padding-bottom: 15px;
+  list-style: none;
+}
+.datos-clientes li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.cliente {
+  display: block;
+  background-color: #333333;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #333333;
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */

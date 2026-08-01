@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes | Gymflow</title>
     <meta name="description" content="">
+    <link rel="stylesheet" href="../scss/main.css">
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@
 
             <img src="logomini.png" alt="Gymflow">
         </picture>
-        <hr>
+        
         <nav>
             <ul>
                 <li><a href="../index.html">Panel principal</a></li>
@@ -24,39 +25,35 @@
                 <li><a href="./revisiones-semanales.html">Revisiones semanales</a></li>
                 <li><a href="./suscripciones.html">Suscripciones</a></li>
                 <li><a href="./copias-seguridad.html">Copias de seguridad</a></li>
-                <li><a href="./perfil.html/">Perfil</a></li>
+                <li><a href="./perfil.html">Perfil</a></li>
                 <li><a href="./configuracion.html">Configuración</a></li>
                 <li><a href="./cerrar-sesion.html">Cerrar Sesión</a></li>
             </ul>
         </nav>
-        <hr>
-        <h2>Gestión de Clientes</h2>
+        
     </header>
     <main>
-        <button>➕ Añadir Cliente</button>
-        <br>
-        <br>
-        <div>
+        <div class="inicio-clientes">
+            <h2>Gestión de <span>Clientes</span></h2>
+            <button>➕ Añadir Cliente</button>
+        </div>
+        
+        <div class="panel-clientes">
             <article>Total Clientes</article>
-            <br>
             <article>Activos</article>
-            <br>
             <article>Inactivos</article>
         </div>
-        <br>
-        <div>
+        
+        <div class="buscar-clientes">
             <input type="search" name="buscar-cliente" id="buscar-cliente" placeholder="Buscar por nombre o email...">
         </div>
-        <br>
-        <div>
+        
+        <div class="datos-clientes">
             <ul>
-                <li><a href="maria-garcia.html">María García</a></li>
-                <br>
-                <li><a href="carlos-rodriguez.html">Carlos Rodríguez</a></li>
-                <br>
-                <li><a href="ana-martinez.html">Ana Martínez</a></li>
-                <br>
-                <li><a href="david-lopez.html">David López</a></li>
+                <li class="cliente"><a href="maria-garcia.html">María García</a></li>
+                <li class="cliente"><a href="carlos-rodriguez.html">Carlos Rodríguez</a></li>
+                <li class="cliente"><a href="ana-martinez.html">Ana Martínez</a></li>
+                <li class="cliente"><a href="david-lopez.html">David López</a></li>
             </ul>
         </div>
     </main>

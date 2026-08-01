@@ -11,7 +11,7 @@
     align-content: center;
 
     article {
-        padding: 60px 40 px;
+        padding: 60px 40px;
         border: $border-card;
         border-radius: $radius-main;
         margin: $spacing-m;
@@ -57,4 +57,98 @@
         color: $color-hover;
         border: $border-active;
     }
+}
+
+
+.inicio-clientes {
+    display: flex;
+    flex-direction: row;
+    margin: $spacing-m;
+    justify-content: space-between;
+
+    h2 {
+        color: $color-text;
+
+        span {
+            color: $color-hover;
+        }
+    }
+
+    button {
+        background-color: $color-gradient;
+        color: $color-text;
+        border-radius: $radius-main;
+        padding: $spacing-s;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.panel-clientes {
+    padding-bottom: $spacing-xl;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin: $spacing-m;
+    align-content: center;
+
+    article {
+        padding: 60px 40px;
+        border: $border-card;
+        border-radius: $radius-main;
+        margin: $spacing-m;
+        color: $color-tareas;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+.buscar-clientes {
+    margin: $spacing-m;
+
+    input {
+        width: 100%;
+        display: inline;
+        background-color: transparent;
+        color: $color-text;
+        border-radius: $radius-searchbar;
+        margin-left: $spacing-m;
+        margin-right: $spacing-m;
+    }
+}
+
+
+.datos-clientes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: $spacing-s;
+    padding: $spacing-m $spacing-xs;
+    margin-bottom: $spacing-m;
+
+    li {
+        padding-bottom: $spacing-m;
+        list-style: none;
+
+        
+        a{
+            text-decoration: none;
+            color: $color-text;
+        }
+    }
+}
+
+.cliente {
+    display: block;
+    background-color: $color-bg-card;
+    gap: $spacing-s;
+    margin-bottom: $spacing-m;
+    padding: $spacing-m;
+    border: $border-card;
+    border-radius: $radius-main;
 }
