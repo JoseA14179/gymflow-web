@@ -1,25 +1,50 @@
 @use '../base/variables' as *;
 
+body {
+    margin: $spacing-m;
+}
+
+nav ul {
+    padding: 0;
+    margin-right: 0;
+}
+
 .tareas {
-    padding-bottom: $spacing-xl;
+    padding-top: $spacing-l;
+    padding-bottom: $spacing-l;
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     align-content: center;
+    gap: $spacing-m;
 
     article {
-        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: $spacing-s;
+        padding: 3.5rem 1rem;
         border: $border-card;
         border-radius: $radius-main;
-        margin: $spacing-m;
         color: $color-tareas;
         width: 100%;
         text-align: center;
+        font-size: $spacing-l;
+        align-self: center;
+
+        &:hover {
+            border: $border-active;
+            transform: translateY(-$spacing-s);
+        }
+        
+        span {
+            padding-top: $spacing-m;
+            align-self: center;
+        }
     }
 }
+
 
 
 .agenda, .manana {
@@ -50,6 +75,7 @@
         color: $color-hover;
         border: $border-active;
         cursor: pointer;
+        transform: translateY(-$spacing-xs);
     }
 
     &:active {
@@ -63,11 +89,12 @@
 .inicio-clientes {
     display: flex;
     flex-direction: row;
-    margin: $spacing-m;
     justify-content: space-between;
+    padding-bottom: $spacing-xl;
 
     h2 {
         color: $color-text;
+        margin-left: $spacing-xs;
 
         span {
             color: $color-hover;
@@ -75,50 +102,77 @@
     }
 
     button {
-        background-color: $color-gradient;
+        background: $color-gradient;
         color: $color-text;
         border-radius: $radius-main;
-        padding: $spacing-s;
+        padding-top: $spacing-xs;
+        padding-bottom: $spacing-xs;
+        margin-right: $spacing-l;
+        height: 40px;
+        margin-top: $spacing-l;
 
         &:hover {
             cursor: pointer;
+            transform: translateY(-$spacing-xs);
+            box-shadow: 0px 4px 4px $color-hover;
         }
     }
 }
 
 .panel-clientes {
-    padding-bottom: $spacing-xl;
+    padding-top: $spacing-l;
+    padding-bottom: $spacing-xs;
     display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
-    margin: $spacing-m;
     align-content: center;
+    gap: $spacing-m;
 
     article {
-        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: $spacing-s;
+        padding: 2rem 1rem;
         border: $border-card;
         border-radius: $radius-main;
-        margin: $spacing-m;
         color: $color-tareas;
         width: 100%;
         text-align: center;
+        font-size: $spacing-xl;
+        align-self: center;
+
+        &:hover {
+            border: $border-active;
+            transform: translateY(-$spacing-xs);
+            box-shadow: 0px 4px 4px $color-hover;
+        }
+        
+        span {
+            padding-top: $spacing-m;
+            align-self: center;
+            color: $color-hover;
+            text-shadow: 0px 0px 12px $color-hover;
+        }
     }
 }
 
 
 
 .buscar-clientes {
-    margin: $spacing-m;
+    margin-bottom: $spacing-xl;
+    margin-top: $spacing-m;
+    margin-left: 0;
+    margin-right: 0;
 
     input {
         width: 100%;
         display: inline;
-        background-color: transparent;
-        color: $color-text;
-        border-radius: $radius-searchbar;
-        margin-left: $spacing-m;
-        margin-right: $spacing-m;
+        background: $color-bg-card;
+        border-radius: $radius-main;
+        border: $border-card;
+        padding: 0.3rem;
     }
 }
 
@@ -127,28 +181,58 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: $spacing-s;
-    padding: $spacing-m $spacing-xs;
-    margin-bottom: $spacing-m;
+    margin-left: 0;
+    padding-left: 0;
 
-    li {
-        padding-bottom: $spacing-m;
+    ul {
+        padding-left: 0;
+        margin-top: $spacing-xl;
+
+        li {
+        width: 100%;
         list-style: none;
-
+        padding-bottom: $spacing-s;
         
         a{
             text-decoration: none;
+            width: 100%;
             color: $color-text;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+            background-color: $color-bg-card;
+            padding: $spacing-xl;
+            border: $border-card;
+            border-radius: $radius-main;
+            font-weight: bold;
+
+            &:hover {
+                color: $color-hover;
+                border: $border-active;
+                cursor: pointer;
+                transform: translateY(-$spacing-xs);
+                box-shadow: 0px 4px 4px $color-hover;
+            }
+
+            span {
+                display: inline-flex;
+                width: fit-content;
+                padding: $spacing-s;
+
+                &.activo {
+                    color: $color-activo;
+                    border-radius: $radius-main;
+                    border: $border-activo;
+                    background-color: $color-bg-activo;
+                }
+
+                &.inactivo {
+                    color: $color-inactivo;
+                    border-radius: $radius-main;
+                    border: $border-inactivo;
+                    background-color: $color-bg-inactivo;
+                }
+            }
         }
     }
-}
-
-.cliente {
-    display: block;
-    background-color: $color-bg-card;
-    gap: $spacing-s;
-    margin-bottom: $spacing-m;
-    padding: $spacing-m;
-    border: $border-card;
-    border-radius: $radius-main;
+    }
 }
