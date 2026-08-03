@@ -9,6 +9,8 @@ $color-bg-activo: rgba(46, 213, 115, 0.15);
 $color-activo: #2ed573;
 $color-bg-inactivo: rgba(255, 71, 87, 0.15);
 $color-inactivo: #ff4757;
+$color-total: #00d2ff;
+$color-bg-total: rgba(0, 210, 255, 0.15);
 
 
 $spacing-xs: 5px;
@@ -24,6 +26,7 @@ $border-card: 1px solid $color-border;
 $border-active: 1px solid $color-hover;
 $border-activo: 1px solid rgba(46, 213, 115, 0.3);
 $border-inactivo: 1px solid rgba(255, 71, 87, 0.3);
+$border-total: 1px solid rgba(0, 210, 255, 0.3);
 
 
 $scale-active: scale(0.98);

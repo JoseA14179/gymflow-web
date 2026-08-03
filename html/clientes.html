@@ -35,13 +35,34 @@
     <main>
         <div class="inicio-clientes">
             <h2>Gestión de <span>Clientes</span></h2>
-            <button>➕ Añadir Cliente</button>
+            <button>
+                <i data-lucide="plus"></i>   
+                <span>Añadir Cliente</span>
+            </button>
         </div>
         
         <div class="panel-clientes">
-            <article>Total Clientes <span>12</span></article>
-            <article>Activos <span>9</span></article>
-            <article>Inactivos <span>3</span></article>
+            <article>
+                <i class="card-icon total" data-lucide="users"></i>
+                <div class="card-info">
+                    <span class="card-title">Total Clientes</span>
+                    <span class="card-number">12</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon activo" data-lucide="users"></i>
+                <div class="card-info">
+                    <span class="card-title">Activos</span>
+                    <span class="card-number">9</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon inactivo" data-lucide="users"></i>
+                <div class="card-info">
+                    <span class="card-title">Inactivos</span>
+                    <span class="card-number">3</span>
+                </div>
+            </article>
         </div>
         
         <div class="buscar-clientes">
@@ -83,5 +104,7 @@
         <hr>
         @ Gymflow 2026 | <a href="aviso-legal.html">Aviso Legal y Política de Privacidad</a>
     </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
