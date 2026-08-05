@@ -33,10 +33,34 @@
             </ul>
         </nav>
         <div class="tareas">
-            <article>Clientes a revisar</article>
-            <article>Sesiones a realizar hoy</article>
-            <article>Revisiones pendientes</article>
-            <article>Entrevistas pendientes</article>
+            <article>
+                <i class="card-icon total" data-lucide="users"></i>
+                <div class="card-info">
+                    <span class="card-title">Clientes hoy</span>
+                    <span class="card-number">5</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon sesiones" data-lucide="circle-check-big"></i>
+                <div class="card-info">
+                    <span class="card-title">Sesiones completadas</span>
+                    <span class="card-number">0/5</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon revisiones" data-lucide="clipboard-list"></i>
+                <div class="card-info">
+                    <span class="card-title">Revisiones pendientes</span>
+                    <span class="card-number">1</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon entrevistas" data-lucide="message-square"></i>
+                <div class="card-info">
+                    <span class="card-title">Entrevistas programadas</span>
+                    <span class="card-number">1</span>
+                </div>
+            </article>
         </div>
         <div class="agenda">
             <form action="" method="post">
@@ -85,5 +109,7 @@
         <hr>
         @ Gymflow 2026 | <a href="./html/aviso-legal.html">Aviso Legal y Política de Privacidad</a>
     </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>

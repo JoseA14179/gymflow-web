@@ -62,25 +62,70 @@ nav ul {
 }
 .tareas article {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 3.5rem 1rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 1.5rem 1.5rem;
   border: 1px solid #333333;
-  border-radius: 10px;
+  border-radius: 20px;
   color: #707070;
   width: 100%;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   align-self: center;
+  align-items: center;
 }
 .tareas article:hover {
   border: 1px solid #03C5E4;
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 4px #03C5E4;
 }
-.tareas article span {
-  padding-top: 15px;
-  align-self: center;
+.tareas article .card-icon {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.tareas article .card-icon.total {
+  color: #00d2ff;
+  background-color: rgba(0, 210, 255, 0.15);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  padding: 10px;
+}
+.tareas article .card-icon.sesiones {
+  color: #2ed573;
+  background-color: rgba(46, 213, 115, 0.15);
+  border: 1px solid rgba(46, 213, 115, 0.3);
+  padding: 10px;
+}
+.tareas article .card-icon.revisiones {
+  color: #FFC300;
+  background-color: #3D2708;
+  border: 1px solid #3D2708;
+  padding: 10px;
+}
+.tareas article .card-icon.entrevistas {
+  color: #D710FF;
+  background-color: #30083D;
+  border: 1px solid #D710FF;
+  padding: 10px;
+}
+.tareas article .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.tareas article .card-info .card-title {
+  font-size: 1.3rem;
+  color: #707070;
+}
+.tareas article .card-info .card-number {
+  font-size: 1.7rem;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 12px #FFFFFF;
+  text-align: left;
 }
 
 .agenda, .manana {

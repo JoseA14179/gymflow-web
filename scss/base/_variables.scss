@@ -11,6 +11,10 @@ $color-bg-inactivo: rgba(255, 71, 87, 0.15);
 $color-inactivo: #ff4757;
 $color-total: #00d2ff;
 $color-bg-total: rgba(0, 210, 255, 0.15);
+$color-revisiones: #FFC300;
+$color-bg-revisiones: #3D2708;
+$color-entrevistas: #D710FF;
+$color-bg-entrevistas: #30083D;
 
 
 $spacing-xs: 5px;
@@ -27,6 +31,8 @@ $border-active: 1px solid $color-hover;
 $border-activo: 1px solid rgba(46, 213, 115, 0.3);
 $border-inactivo: 1px solid rgba(255, 71, 87, 0.3);
 $border-total: 1px solid rgba(0, 210, 255, 0.3);
+$border-revisiones: 1px solid #3D2708;
+$border-entrevistas: 1px solid #D710FF;
 
 
 $scale-active: scale(0.98);
