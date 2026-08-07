@@ -142,12 +142,36 @@ nav ul {
 }
 
 .agenda-item, .manana-item {
-  display: block;
-  background-color: #333333;
-  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #0A0A0A;
+  gap: 20px;
   margin-bottom: 15px;
   padding: 15px;
   border: 1px solid #333333;
+  border-radius: 10px;
+  align-items: center;
+}
+.agenda-item .agenda-icon-sesion, .agenda-item .manana-icon-sesion, .manana-item .agenda-icon-sesion, .manana-item .manana-icon-sesion {
+  color: #2ed573;
+  background-color: rgba(46, 213, 115, 0.15);
+  border: 1px solid rgba(46, 213, 115, 0.3);
+  padding: 5px;
+  border-radius: 10px;
+}
+.agenda-item .agenda-icon-revision, .agenda-item .manana-icon-revision, .manana-item .agenda-icon-revision, .manana-item .manana-icon-revision {
+  color: #FFC300;
+  background-color: #3D2708;
+  border: 1px solid #3D2708;
+  padding: 5px;
+  border-radius: 10px;
+}
+.agenda-item .agenda-icon-entrevista, .agenda-item .manana-icon-entrevista, .manana-item .agenda-icon-entrevista, .manana-item .manana-icon-entrevista {
+  color: #D710FF;
+  background-color: #30083D;
+  border: 1px solid #D710FF;
+  padding: 5px;
   border-radius: 10px;
 }
 .agenda-item:hover, .manana-item:hover {
@@ -190,7 +214,7 @@ nav ul {
 .inicio-clientes button:hover {
   cursor: pointer;
   transform: translateY(-5px);
-  box-shadow: 0px 4px 4px #03C5E4;
+  box-shadow: 0px 3px 3px linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
 }
 
 .panel-clientes {
@@ -301,18 +325,21 @@ nav ul {
   width: 100%;
   color: #FFFFFF;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 0.6fr;
   background-color: #0A0A0A;
   padding: 25px;
   border: 1px solid #333333;
   border-radius: 10px;
 }
 .datos-clientes ul li a:hover {
-  color: #03C5E4;
   border: 1px solid #03C5E4;
-  cursor: pointer;
   transform: translateY(-5px);
-  box-shadow: 0px 4px 4px #03C5E4;
+}
+.datos-clientes ul li a:hover .nombre {
+  color: #03C5E4;
+}
+.datos-clientes ul li a div.menu-cliente span {
+  margin-right: 5px;
 }
 .datos-clientes ul li a span {
   display: inline-flex;
@@ -331,4 +358,54 @@ nav ul {
   border-radius: 10px;
   border: 1px solid rgba(255, 71, 87, 0.3);
   background-color: rgba(255, 71, 87, 0.15);
+}
+.datos-clientes ul li a span.objetivo {
+  background-color: #333333;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.datos-clientes ul li a span.ver-cliente {
+  color: #03C5E4;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-clientes ul li a span.ver-cliente:hover {
+  color: #FFFFFF;
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
+}
+.datos-clientes ul li a span.editar-cliente {
+  color: #D710FF;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-clientes ul li a span.editar-cliente:hover {
+  color: #FFFFFF;
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
+}
+.datos-clientes ul li a span.mensaje-cliente {
+  color: #2ed573;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-clientes ul li a span.mensaje-cliente:hover {
+  color: #FFFFFF;
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
+}
+.datos-clientes ul li a span.eliminar-cliente {
+  color: #ff4757;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-clientes ul li a span.eliminar-cliente:hover {
+  color: #FFFFFF;
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
 }/*# sourceMappingURL=main.css.map */

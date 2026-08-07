@@ -115,13 +115,40 @@ nav ul {
 
 
 .agenda-item, .manana-item {
-    display: block;
-    background-color: $color-bg-card;
-    gap: $spacing-s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: $color-bg-main;
+    gap: $spacing-l;
     margin-bottom: $spacing-m;
     padding: $spacing-m;
     border: $border-card;
     border-radius: $radius-main;
+    align-items: center;
+
+    .agenda-icon-sesion, .manana-icon-sesion {
+        color: $color-activo;
+        background-color: $color-bg-activo;
+        border: $border-activo;
+        padding: $spacing-xs;
+        border-radius: $radius-main;
+    }
+
+    .agenda-icon-revision, .manana-icon-revision {
+        color: $color-revisiones;
+        background-color: $color-bg-revisiones;
+        border: $border-revisiones;
+        padding: $spacing-xs;
+        border-radius: $radius-main;
+    }
+
+    .agenda-icon-entrevista, .manana-icon-entrevista {
+        color: $color-entrevistas;
+        background-color: $color-bg-entrevistas;
+        border: $border-entrevistas;
+        padding: $spacing-xs;
+        border-radius: $radius-main;
+    }
 
     &:hover {
         color: $color-hover;
@@ -168,7 +195,7 @@ nav ul {
         &:hover {
             cursor: pointer;
             transform: translateY(-$spacing-xs);
-            box-shadow: 0px 4px 4px $color-hover;
+            box-shadow: 0px 3px 3px $color-gradient;
         }
     }
 }
@@ -294,18 +321,25 @@ nav ul {
             width: 100%;
             color: $color-text;
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+            grid-template-columns: 1.5fr 1fr 1fr 0.6fr;
             background-color: $color-bg-main;
             padding: $spacing-xl;
             border: $border-card;
             border-radius: $radius-main;
 
             &:hover {
-                color: $color-hover;
                 border: $border-active;
-                cursor: pointer;
                 transform: translateY(-$spacing-xs);
-                box-shadow: 0px 4px 4px $color-hover;
+
+                .nombre {
+                    color: $color-hover;
+                }
+            }
+
+            div.menu-cliente {
+                span {
+                    margin-right: $spacing-xs;
+                }
             }
 
             span {
@@ -325,6 +359,65 @@ nav ul {
                     border-radius: $radius-main;
                     border: $border-inactivo;
                     background-color: $color-bg-inactivo;
+                }
+
+                &.objetivo {
+                    background-color: $color-bg-card;
+                    border: $border-card;
+                    border-radius: $radius-main;
+                    margin-left: $spacing-s;
+                }
+
+                &.ver-cliente {
+                    color: $color-hover;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        color: $color-text;
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
+                }
+
+                &.editar-cliente {
+                    color: $color-entrevistas;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        color: $color-text;
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
+                }
+
+                &.mensaje-cliente {
+                    color: $color-activo;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        color: $color-text;
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
+                }
+
+                &.eliminar-cliente {
+                    color: $color-inactivo;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        color: $color-text;
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
                 }
             }
         }
