@@ -30,44 +30,182 @@
                 <li><a href="./cerrar-sesion.html">Cerrar Sesión</a></li>
             </ul>
         </nav>
-        
-        <h2>Gestión de Entrevistas</h2>
     </header>
     <main>
-        <button>➕ Nueva Entrevista</button>
-        <br>
-        <br>
-        <div>
-            <article>Próximas</article>
-            <br>
-            <article>Completadas</article>
-            <br>
-            <article>Pendientes</article>
+        <div class="inicio-entrevistas">
+            <h2>Gestión de <span>entrevistas</span></h2>
+            <button>
+                <i data-lucide="plus"></i>   
+                <span>Nueva Entrevista</span>
+            </button>
         </div>
-        <br>
-        <div>
-            <h3>📆 Próximas Entrevistas</h3>
+        <div class="panel-entrevistas">
+            <article>
+                <i class="card-icon total" data-lucide="calendar"></i>
+                <div class="card-info">
+                    <span class="card-title">Próximas</span>
+                    <span class="card-number">3</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon activo" data-lucide="circle-check"></i>
+                <div class="card-info">
+                    <span class="card-title">Completadas</span>
+                    <span class="card-number">1</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon revisiones" data-lucide="info"></i>
+                <div class="card-info">
+                    <span class="card-title">Pendientes</span>
+                    <span class="card-number">1</span>
+                </div>
+            </article>
+        </div>
+        <div class="datos-entrevistas">
             <ul>
-                <li><a href="maria-garcia.html">María García</a></li>
-                <br>
-                <li><a href="carlos-rodriguez.html">Carlos Rodríguez</a></li>
-                <br>
-                <li><a href="david-lopez.html">David López</a></li>
+                <li><a href="maria-garcia.html"> 
+                    <div class="nombre">
+                        <span>María García</span>
+                    </div>
+                    <div class="detalles">
+                        <span class="inicial">Inicial</span>
+                        <span class="programada" >Programada</span>
+                    </div>
+                    <div class="fecha-entrevista">
+                        <div class="hora-entrevista">
+                            <i data-lucide="clock"></i>
+                            <span>10:00</span>
+                        </div>
+                        <div class="dia-entrevista">
+                            <i data-lucide="calendar"></i>
+                            <span>10 jun 2026</span>
+                        </div>
+                    </div>
+                    <div class="menu-cliente">
+                        <span class="entrevista-hecha" >
+                            <i data-lucide="circle-check"></i>
+                        </span>
+                        <span class="editar-cliente" >
+                            <i data-lucide="pencil"></i>
+                        </span>
+                        <span class="informe">
+                            <i data-lucide="file-text"></i>
+                        </span>
+                        <span class="eliminar-cliente">
+                            <i data-lucide="trash-2"></i>
+                        </span>
+                    </div>
+                </a></li>
+                <li><a href="carlos-rodriguez.html">
+                    <div class="nombre">
+                        <span>Carlos Rodríguez</span>
+                    </div>
+                    <div class="detalles">
+                        <span class="seguimiento">Seguimiento</span>
+                        <span class="programada" >Programada</span>
+                    </div>
+                    <div class="fecha-entrevista">
+                        <div class="hora-entrevista">
+                            <i data-lucide="clock"></i>
+                            <span>10:00</span>
+                        </div>
+                        <div class="dia-entrevista">
+                            <i data-lucide="calendar"></i>
+                            <span>10 jun 2026</span>
+                        </div>
+                    </div>
+                    <div class="menu-cliente">
+                        <span class="entrevista-hecha">
+                            <i data-lucide="circle-check"></i>
+                        </span>
+                        <span class="editar-cliente">
+                            <i data-lucide="pencil"></i>
+                        </span>
+                        <span class="informe">
+                            <i data-lucide="file-text"></i>
+                        </span>
+                        <span class="eliminar-cliente">
+                            <i data-lucide="trash-2"></i>
+                        </span>
+                    </div>
+                </a></li>
+                <li><a href="ana-martinez.html">
+                    <div class="nombre">
+                        <span>Ana Martínez</span>
+                    </div>
+                    <div class="detalles">
+                        <span class="inicial">Inicial</span>
+                        <span class="pendiente" >Pendiente</span>
+                    </div>
+                    <div class="fecha-entrevista">
+                        <div class="hora-entrevista">
+                            <i data-lucide="clock"></i>
+                            <span>10:00</span>
+                        </div>
+                        <div class="dia-entrevista">
+                            <i data-lucide="calendar"></i>
+                            <span>10 jun 2026</span>
+                        </div>
+                    </div>
+                    <div class="menu-cliente">
+                        <span class="entrevista-hecha">
+                            <i data-lucide="circle-check"></i>
+                        </span>
+                        <span class="editar-cliente">
+                            <i data-lucide="pencil"></i>
+                        </span>
+                        <span class="informe">
+                            <i data-lucide="file-text"></i>
+                        </span>
+                        <span class="eliminar-cliente">
+                            <i data-lucide="trash-2"></i>
+                        </span>
+                    </div>
+                </a></li>
             </ul>
         </div>
-        <br>
-        <div>
-            <h3>✅ Entrevistas Completadas</h3>
+        <div class="entrevistas-completadas">
+            <h3>Entrevistas Completadas</h3>
             <ul>
-                <li><a href="ana-martinez.html">Ana Martínez</a></li>
+                <li><a href="david-lopez.html">
+                    <div class="nombre">
+                        <span>David López</span>
+                    </div>
+                    <div class="detalles">
+                        <span class="reevaluacion">Reevaluación</span>
+                        <span class="completada" >Completada</span>
+                    </div>
+                   <div class="fecha-entrevista">
+                        <div class="hora-entrevista">
+                            <i data-lucide="clock"></i>
+                            <span>10:00</span>
+                        </div>
+                        <div class="dia-entrevista">
+                            <i data-lucide="calendar"></i>
+                            <span>10 jun 2026</span>
+                        </div>
+                    </div>
+                    <div class="menu-cliente">
+                        <span class="editar-cliente">
+                            <i data-lucide="pencil"></i>
+                        </span>
+                        <span class="informe">
+                            <i data-lucide="file-text"></i>
+                        </span>
+                        <span class="eliminar-cliente">
+                            <i data-lucide="trash-2"></i>
+                        </span>
+                    </div>
+                </a></li>
             </ul>
         </div>
     </main>
     <footer>
-        <br>
-        <br>
         <hr>
         @ Gymflow 2026 | <a href="aviso-legal.html">Aviso Legal y Política de Privacidad</a>
     </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>

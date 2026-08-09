@@ -424,3 +424,285 @@ nav ul {
     }
     }
 }
+
+
+
+
+
+.inicio-entrevistas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: $spacing-xl;
+
+    h2 {
+        color: $color-text;
+        margin-left: $spacing-xs;
+
+        span {
+            color: $color-hover;
+        }
+    }
+
+    button {
+        background: $color-gradient;
+        color: $color-text;
+        border-radius: $radius-main;
+        margin-right: $spacing-l;
+        height: 40px;
+        margin-top: $spacing-l;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        gap: $spacing-xs;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-$spacing-xs);
+            box-shadow: 0px 3px 3px $color-gradient;
+        }
+    }
+}
+
+
+.panel-entrevistas {
+    padding-top: $spacing-l;
+    padding-bottom: $spacing-xs;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    gap: $spacing-m;
+
+    article {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: $spacing-m;
+        padding: 1.5rem 1.5rem;
+        border: $border-card;
+        border-radius: 20px;
+        color: $color-tareas;
+        width: 100%;
+        text-align: center;
+        font-size: $spacing-xl;
+        align-self: center;
+        align-items: center;
+
+        &:hover {
+            border: $border-active;
+            transform: translateY(-$spacing-xs);
+            box-shadow: 0px 4px 4px $color-hover;
+        }
+
+        .card-icon {
+            display: inline-flex;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            border-radius: $radius-main;
+
+            &.total {
+                color: $color-total;
+                background-color: $color-bg-total;
+                border: $border-total;
+                padding: $spacing-s;
+            }
+
+            &.activo {
+                color: $color-activo;
+                background-color: $color-bg-activo;
+                border: $border-activo;
+                padding: $spacing-s;
+            }
+
+            &.inactivo {
+                color: $color-inactivo;
+                background-color: $color-bg-inactivo;
+                border: $border-inactivo;
+                padding: $spacing-s;
+            }
+
+            &.revisiones {
+                color: $color-revisiones;
+                background-color: $color-bg-revisiones;
+                border: $border-revisiones;
+                padding: $spacing-s;
+            }
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-m;
+
+            .card-title {
+                font-size: 1.3rem;
+                color: $color-tareas;
+            }
+
+            .card-number {
+                font-size: 1.7rem;
+                color: $color-text;
+                text-shadow: 0px 0px 12px $color-text;
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+
+.datos-entrevistas, .entrevistas-completadas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+
+    ul {
+        padding-left: 0;
+        margin-top: $spacing-xl;
+
+        li {
+        width: 100%;
+        list-style: none;
+        padding-bottom: $spacing-s;
+        
+        a{
+            text-decoration: none;
+            width: 100%;
+            color: $color-text;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 0.6fr;
+            background-color: $color-bg-main;
+            padding: $spacing-xl;
+            border: $border-card;
+            border-radius: $radius-main;
+
+            &:hover {
+                border: $border-active;
+                transform: translateY(-$spacing-xs);
+
+                .nombre {
+                    color: $color-hover;
+                }
+            }
+
+            .fecha-entrevista {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                align-items: center;
+                gap: $spacing-s;
+
+                .hora-entrevista , .dia-entrevista {
+                    display: inline-flex;
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+
+            div.menu-cliente {
+                span {
+                    margin-right: $spacing-xs;
+                }
+            }
+
+            span {
+                display: inline-flex;
+                width: fit-content;
+                padding: $spacing-s;
+
+                &.inicial , &.programada {
+                    color: $color-total;
+                    border-radius: $radius-main;
+                    border: $border-total;
+                    background-color: $color-bg-total;
+                }
+
+                &.seguimiento {
+                    color: $color-entrevistas;
+                    border-radius: $radius-main;
+                    border: $border-entrevistas;
+                    background-color: $color-bg-entrevistas;
+                }
+
+                &.pendiente {
+                    color: $color-revisiones;
+                    border-radius: $radius-main;
+                    border: $border-revisiones;
+                    background-color: $color-bg-revisiones;
+                }
+
+                &.reevaluacion , &.completada {
+                    color: $color-activo;
+                    border-radius: $radius-main;
+                    border: $border-activo;
+                    background-color: $color-bg-activo;
+                }
+
+                &.inicial , &.seguimiento , &.reevaluacion {
+                    margin-right: $spacing-s;
+                }
+
+
+
+                &.informe {
+                    color: $color-hover;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        color: $color-text;
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
+                }
+
+                &.editar-cliente {
+                    color: $color-entrevistas;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        color: $color-text;
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
+                }
+
+                &.entrevista-hecha {
+                    color: $color-activo;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        color: $color-text;
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
+                }
+
+                &.eliminar-cliente {
+                    color: $color-inactivo;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        color: $color-text;
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
+                }
+            }
+        }
+    }
+    }
+}

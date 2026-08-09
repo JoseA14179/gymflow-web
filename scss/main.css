@@ -408,4 +408,240 @@ nav ul {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
+}
+
+.inicio-entrevistas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+.inicio-entrevistas h2 {
+  color: #FFFFFF;
+  margin-left: 5px;
+}
+.inicio-entrevistas h2 span {
+  color: #03C5E4;
+}
+.inicio-entrevistas button {
+  background: linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
+  color: #FFFFFF;
+  border-radius: 10px;
+  margin-right: 20px;
+  height: 40px;
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 5px;
+}
+.inicio-entrevistas button:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0px 3px 3px linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
+}
+
+.panel-entrevistas {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+}
+.panel-entrevistas article {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 1.5rem 1.5rem;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  color: #707070;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  align-self: center;
+  align-items: center;
+}
+.panel-entrevistas article:hover {
+  border: 1px solid #03C5E4;
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 4px #03C5E4;
+}
+.panel-entrevistas article .card-icon {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.panel-entrevistas article .card-icon.total {
+  color: #00d2ff;
+  background-color: rgba(0, 210, 255, 0.15);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  padding: 10px;
+}
+.panel-entrevistas article .card-icon.activo {
+  color: #2ed573;
+  background-color: rgba(46, 213, 115, 0.15);
+  border: 1px solid rgba(46, 213, 115, 0.3);
+  padding: 10px;
+}
+.panel-entrevistas article .card-icon.inactivo {
+  color: #ff4757;
+  background-color: rgba(255, 71, 87, 0.15);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  padding: 10px;
+}
+.panel-entrevistas article .card-icon.revisiones {
+  color: #FFC300;
+  background-color: #3D2708;
+  border: 1px solid #3D2708;
+  padding: 10px;
+}
+.panel-entrevistas article .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.panel-entrevistas article .card-info .card-title {
+  font-size: 1.3rem;
+  color: #707070;
+}
+.panel-entrevistas article .card-info .card-number {
+  font-size: 1.7rem;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 12px #FFFFFF;
+  text-align: left;
+}
+
+.datos-entrevistas, .entrevistas-completadas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+}
+.datos-entrevistas ul, .entrevistas-completadas ul {
+  padding-left: 0;
+  margin-top: 25px;
+}
+.datos-entrevistas ul li, .entrevistas-completadas ul li {
+  width: 100%;
+  list-style: none;
+  padding-bottom: 10px;
+}
+.datos-entrevistas ul li a, .entrevistas-completadas ul li a {
+  text-decoration: none;
+  width: 100%;
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 0.6fr;
+  background-color: #0A0A0A;
+  padding: 25px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+}
+.datos-entrevistas ul li a:hover, .entrevistas-completadas ul li a:hover {
+  border: 1px solid #03C5E4;
+  transform: translateY(-5px);
+}
+.datos-entrevistas ul li a:hover .nombre, .entrevistas-completadas ul li a:hover .nombre {
+  color: #03C5E4;
+}
+.datos-entrevistas ul li a .fecha-entrevista, .entrevistas-completadas ul li a .fecha-entrevista {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+.datos-entrevistas ul li a .fecha-entrevista .hora-entrevista, .datos-entrevistas ul li a .fecha-entrevista .dia-entrevista, .entrevistas-completadas ul li a .fecha-entrevista .hora-entrevista, .entrevistas-completadas ul li a .fecha-entrevista .dia-entrevista {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+}
+.datos-entrevistas ul li a div.menu-cliente span, .entrevistas-completadas ul li a div.menu-cliente span {
+  margin-right: 5px;
+}
+.datos-entrevistas ul li a span, .entrevistas-completadas ul li a span {
+  display: inline-flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+}
+.datos-entrevistas ul li a span.inicial, .datos-entrevistas ul li a span.programada, .entrevistas-completadas ul li a span.inicial, .entrevistas-completadas ul li a span.programada {
+  color: #00d2ff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  background-color: rgba(0, 210, 255, 0.15);
+}
+.datos-entrevistas ul li a span.seguimiento, .entrevistas-completadas ul li a span.seguimiento {
+  color: #D710FF;
+  border-radius: 10px;
+  border: 1px solid #D710FF;
+  background-color: #30083D;
+}
+.datos-entrevistas ul li a span.pendiente, .entrevistas-completadas ul li a span.pendiente {
+  color: #FFC300;
+  border-radius: 10px;
+  border: 1px solid #3D2708;
+  background-color: #3D2708;
+}
+.datos-entrevistas ul li a span.reevaluacion, .datos-entrevistas ul li a span.completada, .entrevistas-completadas ul li a span.reevaluacion, .entrevistas-completadas ul li a span.completada {
+  color: #2ed573;
+  border-radius: 10px;
+  border: 1px solid rgba(46, 213, 115, 0.3);
+  background-color: rgba(46, 213, 115, 0.15);
+}
+.datos-entrevistas ul li a span.inicial, .datos-entrevistas ul li a span.seguimiento, .datos-entrevistas ul li a span.reevaluacion, .entrevistas-completadas ul li a span.inicial, .entrevistas-completadas ul li a span.seguimiento, .entrevistas-completadas ul li a span.reevaluacion {
+  margin-right: 10px;
+}
+.datos-entrevistas ul li a span.informe, .entrevistas-completadas ul li a span.informe {
+  color: #03C5E4;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-entrevistas ul li a span.informe:hover, .entrevistas-completadas ul li a span.informe:hover {
+  color: #FFFFFF;
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
+}
+.datos-entrevistas ul li a span.editar-cliente, .entrevistas-completadas ul li a span.editar-cliente {
+  color: #D710FF;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-entrevistas ul li a span.editar-cliente:hover, .entrevistas-completadas ul li a span.editar-cliente:hover {
+  color: #FFFFFF;
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
+}
+.datos-entrevistas ul li a span.entrevista-hecha, .entrevistas-completadas ul li a span.entrevista-hecha {
+  color: #2ed573;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-entrevistas ul li a span.entrevista-hecha:hover, .entrevistas-completadas ul li a span.entrevista-hecha:hover {
+  color: #FFFFFF;
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
+}
+.datos-entrevistas ul li a span.eliminar-cliente, .entrevistas-completadas ul li a span.eliminar-cliente {
+  color: #ff4757;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-entrevistas ul li a span.eliminar-cliente:hover, .entrevistas-completadas ul li a span.eliminar-cliente:hover {
+  color: #FFFFFF;
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
 }/*# sourceMappingURL=main.css.map */
