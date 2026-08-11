@@ -1,0 +1,20 @@
+@use '../base/variables' as *;
+
+button {
+        background: $color-gradient;
+        color: $color-text;
+        border-radius: $radius-main;
+        margin-right: $spacing-l;
+        height: 40px;
+        margin-top: $spacing-l;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        gap: $spacing-xs;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-$spacing-xs);
+            box-shadow: 0px 3px 3px $color-gradient;
+        }
+    }

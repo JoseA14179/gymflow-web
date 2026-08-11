@@ -1,5 +1,10 @@
 @use '../base/variables' as *;
 
+nav ul {
+    padding: 0;
+    margin-right: 0;
+}
+
 nav {
     ul {
         display: flex;
@@ -33,12 +38,6 @@ nav {
                     border-radius: $radius-main;
                 }
             }
-
-
         }
     }
-
-    
-
-
 }

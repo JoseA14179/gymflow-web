@@ -4,11 +4,6 @@ body {
     margin: $spacing-m;
 }
 
-nav ul {
-    padding: 0;
-    margin-right: 0;
-}
-
 .tareas {
     padding-top: $spacing-l;
     padding-bottom: $spacing-l;
@@ -179,25 +174,6 @@ nav ul {
             color: $color-hover;
         }
     }
-
-    button {
-        background: $color-gradient;
-        color: $color-text;
-        border-radius: $radius-main;
-        margin-right: $spacing-l;
-        height: 40px;
-        margin-top: $spacing-l;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        gap: $spacing-xs;
-
-        &:hover {
-            cursor: pointer;
-            transform: translateY(-$spacing-xs);
-            box-shadow: 0px 3px 3px $color-gradient;
-        }
-    }
 }
 
 .panel-clientes {
@@ -283,24 +259,7 @@ nav ul {
 
 
 
-.buscar-clientes {
-    margin-bottom: $spacing-xl;
-    margin-top: $spacing-m;
-    margin-left: 0;
-    margin-right: 0;
-
-    input {
-        width: 100%;
-        display: inline;
-        background: $color-bg-card;
-        border-radius: $radius-main;
-        border: $border-card;
-        padding: 0.3rem;
-    }
-}
-
-
-.datos-clientes {
+.datos-clientes , .revisiones-vencidas , .revisiones-pendientes , .revisiones-completadas {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -342,6 +301,20 @@ nav ul {
                 }
             }
 
+            .fecha-revision {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                align-items: center;
+                gap: $spacing-s;
+
+                .ultima-revision , .dia-revision {
+                    display: inline-flex;
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+
             span {
                 display: inline-flex;
                 width: fit-content;
@@ -368,7 +341,14 @@ nav ul {
                     margin-left: $spacing-s;
                 }
 
-                &.ver-cliente {
+                &.pendiente {
+                    color: $color-revisiones;
+                    border-radius: $radius-main;
+                    border: $border-revisiones;
+                    background-color: $color-bg-revisiones;
+                }
+
+                &.ver-cliente , &.notificar-revision {
                     color: $color-hover;
                     border-radius: $radius-main;
                     border: $border-card;
@@ -394,7 +374,7 @@ nav ul {
                     }
                 }
 
-                &.mensaje-cliente {
+                &.mensaje-cliente , &.revision-hecha {
                     color: $color-activo;
                     border-radius: $radius-main;
                     border: $border-card;
@@ -419,17 +399,29 @@ nav ul {
                         box-shadow: 0px 4px 4px $color-hover;
                     }
                 }
+
+                &.informe {
+                    color: $color-text;
+                    border-radius: $radius-main;
+                    border: $border-card;
+                    background-color: $color-bg-main;
+
+                    &:hover {
+                        border: $border-active;
+                        box-shadow: 0px 4px 4px $color-hover;
+                    }
+                }
             }
         }
     }
+
     }
 }
 
 
 
 
-
-.inicio-entrevistas {
+.inicio-entrevistas,  .inicio-revisiones {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -443,29 +435,10 @@ nav ul {
             color: $color-hover;
         }
     }
-
-    button {
-        background: $color-gradient;
-        color: $color-text;
-        border-radius: $radius-main;
-        margin-right: $spacing-l;
-        height: 40px;
-        margin-top: $spacing-l;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        gap: $spacing-xs;
-
-        &:hover {
-            cursor: pointer;
-            transform: translateY(-$spacing-xs);
-            box-shadow: 0px 3px 3px $color-gradient;
-        }
-    }
 }
 
 
-.panel-entrevistas {
+.panel-entrevistas , .panel-revisiones {
     padding-top: $spacing-l;
     padding-bottom: $spacing-xs;
     display: flex;

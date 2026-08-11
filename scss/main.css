@@ -9,6 +9,32 @@ body {
   padding: 0;
 }
 
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  color: #FFFFFF;
+}
+footer a {
+  display: inline-flex;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-left: 10px;
+}
+footer a:hover {
+  color: #03C5E4;
+}
+footer span {
+  display: inline-flex;
+  color: #FFFFFF;
+}
+
+nav ul {
+  padding: 0;
+  margin-right: 0;
+}
+
 nav ul {
   display: flex;
   margin-top: 10px;
@@ -41,13 +67,26 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-body {
-  margin: 15px;
+button {
+  background: linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
+  color: #FFFFFF;
+  border-radius: 10px;
+  margin-right: 20px;
+  height: 40px;
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 5px;
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0px 3px 3px linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
 }
 
-nav ul {
-  padding: 0;
-  margin-right: 0;
+body {
+  margin: 15px;
 }
 
 .tareas {
@@ -199,23 +238,6 @@ nav ul {
 .inicio-clientes h2 span {
   color: #03C5E4;
 }
-.inicio-clientes button {
-  background: linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
-  color: #FFFFFF;
-  border-radius: 10px;
-  margin-right: 20px;
-  height: 40px;
-  margin-top: 20px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  gap: 5px;
-}
-.inicio-clientes button:hover {
-  cursor: pointer;
-  transform: translateY(-5px);
-  box-shadow: 0px 3px 3px linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
-}
 
 .panel-clientes {
   padding-top: 20px;
@@ -289,38 +311,23 @@ nav ul {
   text-align: left;
 }
 
-.buscar-clientes {
-  margin-bottom: 25px;
-  margin-top: 15px;
-  margin-left: 0;
-  margin-right: 0;
-}
-.buscar-clientes input {
-  width: 100%;
-  display: inline;
-  background: #333333;
-  border-radius: 10px;
-  border: 1px solid #333333;
-  padding: 0.3rem;
-}
-
-.datos-clientes {
+.datos-clientes, .revisiones-vencidas, .revisiones-pendientes, .revisiones-completadas {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-left: 0;
   padding-left: 0;
 }
-.datos-clientes ul {
+.datos-clientes ul, .revisiones-vencidas ul, .revisiones-pendientes ul, .revisiones-completadas ul {
   padding-left: 0;
   margin-top: 25px;
 }
-.datos-clientes ul li {
+.datos-clientes ul li, .revisiones-vencidas ul li, .revisiones-pendientes ul li, .revisiones-completadas ul li {
   width: 100%;
   list-style: none;
   padding-bottom: 10px;
 }
-.datos-clientes ul li a {
+.datos-clientes ul li a, .revisiones-vencidas ul li a, .revisiones-pendientes ul li a, .revisiones-completadas ul li a {
   text-decoration: none;
   width: 100%;
   color: #FFFFFF;
@@ -331,117 +338,128 @@ nav ul {
   border: 1px solid #333333;
   border-radius: 10px;
 }
-.datos-clientes ul li a:hover {
+.datos-clientes ul li a:hover, .revisiones-vencidas ul li a:hover, .revisiones-pendientes ul li a:hover, .revisiones-completadas ul li a:hover {
   border: 1px solid #03C5E4;
   transform: translateY(-5px);
 }
-.datos-clientes ul li a:hover .nombre {
+.datos-clientes ul li a:hover .nombre, .revisiones-vencidas ul li a:hover .nombre, .revisiones-pendientes ul li a:hover .nombre, .revisiones-completadas ul li a:hover .nombre {
   color: #03C5E4;
 }
-.datos-clientes ul li a div.menu-cliente span {
+.datos-clientes ul li a div.menu-cliente span, .revisiones-vencidas ul li a div.menu-cliente span, .revisiones-pendientes ul li a div.menu-cliente span, .revisiones-completadas ul li a div.menu-cliente span {
   margin-right: 5px;
 }
-.datos-clientes ul li a span {
+.datos-clientes ul li a .fecha-revision, .revisiones-vencidas ul li a .fecha-revision, .revisiones-pendientes ul li a .fecha-revision, .revisiones-completadas ul li a .fecha-revision {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+.datos-clientes ul li a .fecha-revision .ultima-revision, .datos-clientes ul li a .fecha-revision .dia-revision, .revisiones-vencidas ul li a .fecha-revision .ultima-revision, .revisiones-vencidas ul li a .fecha-revision .dia-revision, .revisiones-pendientes ul li a .fecha-revision .ultima-revision, .revisiones-pendientes ul li a .fecha-revision .dia-revision, .revisiones-completadas ul li a .fecha-revision .ultima-revision, .revisiones-completadas ul li a .fecha-revision .dia-revision {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+}
+.datos-clientes ul li a span, .revisiones-vencidas ul li a span, .revisiones-pendientes ul li a span, .revisiones-completadas ul li a span {
   display: inline-flex;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px;
 }
-.datos-clientes ul li a span.activo {
+.datos-clientes ul li a span.activo, .revisiones-vencidas ul li a span.activo, .revisiones-pendientes ul li a span.activo, .revisiones-completadas ul li a span.activo {
   color: #2ed573;
   border-radius: 10px;
   border: 1px solid rgba(46, 213, 115, 0.3);
   background-color: rgba(46, 213, 115, 0.15);
 }
-.datos-clientes ul li a span.inactivo {
+.datos-clientes ul li a span.inactivo, .revisiones-vencidas ul li a span.inactivo, .revisiones-pendientes ul li a span.inactivo, .revisiones-completadas ul li a span.inactivo {
   color: #ff4757;
   border-radius: 10px;
   border: 1px solid rgba(255, 71, 87, 0.3);
   background-color: rgba(255, 71, 87, 0.15);
 }
-.datos-clientes ul li a span.objetivo {
+.datos-clientes ul li a span.objetivo, .revisiones-vencidas ul li a span.objetivo, .revisiones-pendientes ul li a span.objetivo, .revisiones-completadas ul li a span.objetivo {
   background-color: #333333;
   border: 1px solid #333333;
   border-radius: 10px;
   margin-left: 10px;
 }
-.datos-clientes ul li a span.ver-cliente {
+.datos-clientes ul li a span.pendiente, .revisiones-vencidas ul li a span.pendiente, .revisiones-pendientes ul li a span.pendiente, .revisiones-completadas ul li a span.pendiente {
+  color: #FFC300;
+  border-radius: 10px;
+  border: 1px solid #3D2708;
+  background-color: #3D2708;
+}
+.datos-clientes ul li a span.ver-cliente, .datos-clientes ul li a span.notificar-revision, .revisiones-vencidas ul li a span.ver-cliente, .revisiones-vencidas ul li a span.notificar-revision, .revisiones-pendientes ul li a span.ver-cliente, .revisiones-pendientes ul li a span.notificar-revision, .revisiones-completadas ul li a span.ver-cliente, .revisiones-completadas ul li a span.notificar-revision {
   color: #03C5E4;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.ver-cliente:hover {
+.datos-clientes ul li a span.ver-cliente:hover, .datos-clientes ul li a span.notificar-revision:hover, .revisiones-vencidas ul li a span.ver-cliente:hover, .revisiones-vencidas ul li a span.notificar-revision:hover, .revisiones-pendientes ul li a span.ver-cliente:hover, .revisiones-pendientes ul li a span.notificar-revision:hover, .revisiones-completadas ul li a span.ver-cliente:hover, .revisiones-completadas ul li a span.notificar-revision:hover {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
-.datos-clientes ul li a span.editar-cliente {
+.datos-clientes ul li a span.editar-cliente, .revisiones-vencidas ul li a span.editar-cliente, .revisiones-pendientes ul li a span.editar-cliente, .revisiones-completadas ul li a span.editar-cliente {
   color: #D710FF;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.editar-cliente:hover {
+.datos-clientes ul li a span.editar-cliente:hover, .revisiones-vencidas ul li a span.editar-cliente:hover, .revisiones-pendientes ul li a span.editar-cliente:hover, .revisiones-completadas ul li a span.editar-cliente:hover {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
-.datos-clientes ul li a span.mensaje-cliente {
+.datos-clientes ul li a span.mensaje-cliente, .datos-clientes ul li a span.revision-hecha, .revisiones-vencidas ul li a span.mensaje-cliente, .revisiones-vencidas ul li a span.revision-hecha, .revisiones-pendientes ul li a span.mensaje-cliente, .revisiones-pendientes ul li a span.revision-hecha, .revisiones-completadas ul li a span.mensaje-cliente, .revisiones-completadas ul li a span.revision-hecha {
   color: #2ed573;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.mensaje-cliente:hover {
+.datos-clientes ul li a span.mensaje-cliente:hover, .datos-clientes ul li a span.revision-hecha:hover, .revisiones-vencidas ul li a span.mensaje-cliente:hover, .revisiones-vencidas ul li a span.revision-hecha:hover, .revisiones-pendientes ul li a span.mensaje-cliente:hover, .revisiones-pendientes ul li a span.revision-hecha:hover, .revisiones-completadas ul li a span.mensaje-cliente:hover, .revisiones-completadas ul li a span.revision-hecha:hover {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
-.datos-clientes ul li a span.eliminar-cliente {
+.datos-clientes ul li a span.eliminar-cliente, .revisiones-vencidas ul li a span.eliminar-cliente, .revisiones-pendientes ul li a span.eliminar-cliente, .revisiones-completadas ul li a span.eliminar-cliente {
   color: #ff4757;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.eliminar-cliente:hover {
+.datos-clientes ul li a span.eliminar-cliente:hover, .revisiones-vencidas ul li a span.eliminar-cliente:hover, .revisiones-pendientes ul li a span.eliminar-cliente:hover, .revisiones-completadas ul li a span.eliminar-cliente:hover {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
+.datos-clientes ul li a span.informe, .revisiones-vencidas ul li a span.informe, .revisiones-pendientes ul li a span.informe, .revisiones-completadas ul li a span.informe {
+  color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #0A0A0A;
+}
+.datos-clientes ul li a span.informe:hover, .revisiones-vencidas ul li a span.informe:hover, .revisiones-pendientes ul li a span.informe:hover, .revisiones-completadas ul li a span.informe:hover {
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 4px 4px #03C5E4;
+}
 
-.inicio-entrevistas {
+.inicio-entrevistas, .inicio-revisiones {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 25px;
 }
-.inicio-entrevistas h2 {
+.inicio-entrevistas h2, .inicio-revisiones h2 {
   color: #FFFFFF;
   margin-left: 5px;
 }
-.inicio-entrevistas h2 span {
+.inicio-entrevistas h2 span, .inicio-revisiones h2 span {
   color: #03C5E4;
 }
-.inicio-entrevistas button {
-  background: linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
-  color: #FFFFFF;
-  border-radius: 10px;
-  margin-right: 20px;
-  height: 40px;
-  margin-top: 20px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  gap: 5px;
-}
-.inicio-entrevistas button:hover {
-  cursor: pointer;
-  transform: translateY(-5px);
-  box-shadow: 0px 3px 3px linear-gradient(to right, #00c6ff 20%, #7f00ff 92%);
-}
 
-.panel-entrevistas {
+.panel-entrevistas, .panel-revisiones {
   padding-top: 20px;
   padding-bottom: 5px;
   display: flex;
@@ -451,7 +469,7 @@ nav ul {
   align-content: center;
   gap: 15px;
 }
-.panel-entrevistas article {
+.panel-entrevistas article, .panel-revisiones article {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -466,12 +484,12 @@ nav ul {
   align-self: center;
   align-items: center;
 }
-.panel-entrevistas article:hover {
+.panel-entrevistas article:hover, .panel-revisiones article:hover {
   border: 1px solid #03C5E4;
   transform: translateY(-5px);
   box-shadow: 0px 4px 4px #03C5E4;
 }
-.panel-entrevistas article .card-icon {
+.panel-entrevistas article .card-icon, .panel-revisiones article .card-icon {
   display: inline-flex;
   width: 50px;
   height: 50px;
@@ -479,40 +497,40 @@ nav ul {
   justify-content: center;
   border-radius: 10px;
 }
-.panel-entrevistas article .card-icon.total {
+.panel-entrevistas article .card-icon.total, .panel-revisiones article .card-icon.total {
   color: #00d2ff;
   background-color: rgba(0, 210, 255, 0.15);
   border: 1px solid rgba(0, 210, 255, 0.3);
   padding: 10px;
 }
-.panel-entrevistas article .card-icon.activo {
+.panel-entrevistas article .card-icon.activo, .panel-revisiones article .card-icon.activo {
   color: #2ed573;
   background-color: rgba(46, 213, 115, 0.15);
   border: 1px solid rgba(46, 213, 115, 0.3);
   padding: 10px;
 }
-.panel-entrevistas article .card-icon.inactivo {
+.panel-entrevistas article .card-icon.inactivo, .panel-revisiones article .card-icon.inactivo {
   color: #ff4757;
   background-color: rgba(255, 71, 87, 0.15);
   border: 1px solid rgba(255, 71, 87, 0.3);
   padding: 10px;
 }
-.panel-entrevistas article .card-icon.revisiones {
+.panel-entrevistas article .card-icon.revisiones, .panel-revisiones article .card-icon.revisiones {
   color: #FFC300;
   background-color: #3D2708;
   border: 1px solid #3D2708;
   padding: 10px;
 }
-.panel-entrevistas article .card-info {
+.panel-entrevistas article .card-info, .panel-revisiones article .card-info {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.panel-entrevistas article .card-info .card-title {
+.panel-entrevistas article .card-info .card-title, .panel-revisiones article .card-info .card-title {
   font-size: 1.3rem;
   color: #707070;
 }
-.panel-entrevistas article .card-info .card-number {
+.panel-entrevistas article .card-info .card-number, .panel-revisiones article .card-info .card-number {
   font-size: 1.7rem;
   color: #FFFFFF;
   text-shadow: 0px 0px 12px #FFFFFF;
@@ -644,4 +662,19 @@ nav ul {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
+}
+
+.buscar-clientes {
+  margin-bottom: 25px;
+  margin-top: 15px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.buscar-clientes input {
+  width: 100%;
+  display: inline;
+  background: #333333;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  padding: 0.3rem;
 }/*# sourceMappingURL=main.css.map */

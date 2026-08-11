@@ -1,0 +1,17 @@
+@use '../base/variables' as *;
+
+.buscar-clientes {
+    margin-bottom: $spacing-xl;
+    margin-top: $spacing-m;
+    margin-left: 0;
+    margin-right: 0;
+
+    input {
+        width: 100%;
+        display: inline;
+        background: $color-bg-card;
+        border-radius: $radius-main;
+        border: $border-card;
+        padding: 0.3rem;
+    }
+}

@@ -1,0 +1,25 @@
+@use '../base/variables' as *;
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: $spacing-m;
+    color: $color-text;
+
+    a {
+        display: inline-flex;
+        text-decoration: none;
+        color: $color-text;
+        margin-left: $spacing-s;
+
+        &:hover {
+            color: $color-hover;
+        }
+    }
+
+    span {
+        display: inline-flex;
+        color: $color-text;
+    }
+}
