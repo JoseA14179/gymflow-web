@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gymflow | Software para entrenadores personales</title>
     <meta name="description" content="Gymflow | Software para entrenadores personales">
-    <link rel="stylesheet" href="../scss/main.css">
+    <link rel="stylesheet" href="../main.css">
 </head>
 <body>
     <header>
@@ -16,9 +16,7 @@
 
             <img src="logomini.png" alt="Gymflow">
         </picture>
-        <h2>Bienvenido a Gymflow!! 💪</h2>
-    </header>
-    <main>
+
         <nav>
             <ul>
                 <li><a href="../index.html">Panel principal</a></li>
@@ -32,58 +30,107 @@
                 <li><a href="./cerrar-sesion.html">Cerrar Sesión</a></li>
             </ul>
         </nav>
-        <div class="tareas">
-            <article>Clientes a revisar</article>
-            <article>Sesiones a realizar hoy</article>
-            <article>Revisiones pendientes</article>
-            <article>Entrevistas pendientes</article>
+    </header>
+    <main>
+        <div class="inicio-copia-seguridad">
+            <h2>Gestión de <span>copias de seguridad</span></h2>
         </div>
-        <div class="agenda">
-            <form action="" method="post">
-                <h3>Agenda del día</h3>
-                <div class="agenda-item">
-                    <input type="checkbox" name="sesion_luis_rodriguez" id="sesion_luis_rodriguez"> 
-                    <span>Luis Rodríguez (Sesión)</span>
+        <div class="panel-copia">
+            <article class="card total">
+                <i data-lucide="users"></i>
+                <div class="card-info">
+                    <h4 class="card-title">Datos de clientes</h4>
+                    <p class="card-number">5 MB</p>
                 </div>
-                <div class="agenda-item">
-                    <input type="checkbox" name="entrevista_sara_montoya" id="entrevista_sara_montoya"> 
-                    <span>Sara Montoya (Entrevista)</span>
+            </article>
+            <article class="card activo">
+                <i data-lucide="credit-card"></i>
+                <div class="card-info">
+                    <h4 class="card-title">Facturas y pagos</h4>
+                    <p class="card-number">5 MB</p>
                 </div>
-                <div class="agenda-item">
-                    <input type="checkbox" name="sesion_maria_lopez" id="sesion_maria_lopez"> 
-                    <span>María López (Sesión)</span>
+            </article>
+            <article class="card entrevistas">
+                <i data-lucide="dumbbell"></i>
+                <div class="card-info">
+                    <h4 class="card-title">Rutinas y entrenamientos</h4>
+                    <p class="card-number">5 MB</p>
                 </div>
-                <div class="agenda-item">
-                    <input type="checkbox" name="revision_pedro_garcia" id="revision_pedro_garcia"> 
-                    <span>Pedro García (Revisión)</span>
+            </article>
+            <article class="card revisiones">
+                <i data-lucide="trending-up"></i>
+                <div class="card-info">
+                    <h4 class="card-title">Datos de progreso</h4>
+                    <p class="card-number">5 MB</p>
                 </div>
-                <div class="agenda-item">
-                    <input type="checkbox" name="sesion_ana_torres" id="sesion_ana_torres"> 
-                    <span>Ana Torres (Sesión)</span>
-                </div>
-            </form>
+            </article>
+            <article class="btn">
+                <i class="crear-copia" data-lucide="database-backup"></i>
+                <p>Crear copia de seguridad</p>
+            </article>
         </div>
-        <div class="manana">
-            <form action="" method="post">
-                <h3>Mañana</h3>
-                <div class="manana-item">
-                    <input type="checkbox" name="sesion_luis_rodriguez" id="sesion_luis_rodriguez">
-                    <span>Luis Rodríguez (Sesión)</span>
-                </div>
-                <div class="manana-item">
-                    <input type="checkbox" name="sesion_maria_lopez" id="sesion_maria_lopez">
-                    <span>María López (Sesión)</span>
-                </div>
-                <div class="manana-item">
-                    <input type="checkbox" name="revision_carlos_ruiz" id="revision_carlos_ruiz">
-                    <span>Carlos Ruiz (Revisión)</span>
-                </div>
-            </form>
+        <div class="historial-copias">
+            <ul>
+                <li><a href="#">
+                    <span class="check-copia">
+                        <i data-lucide="circle-check-big"></i>
+                    </span>
+                    <div class="detalles">
+                        <span class="peso">20 MB</span>
+                        <span class="fecha">20-11-2026 11:30</span>
+                    </div>
+                    <span class="download-copia">
+                        <i data-lucide="download"></i>
+                        <p>Descargar</p>
+                    </span>
+                </a></li>
+                <li><a href="#">
+                    <span class="check-copia">
+                        <i data-lucide="circle-check-big"></i>
+                    </span>
+                    <div class="detalles">
+                        <span class="peso">20 MB</span>
+                        <span class="fecha">20-11-2026 11:30</span>
+                    </div>
+                    <span class="download-copia">
+                        <i data-lucide="download"></i>
+                        <p>Descargar</p>
+                    </span>
+                </a></li>
+                <li><a href="#">
+                    <span class="check-copia">
+                        <i data-lucide="circle-check-big"></i>
+                    </span>
+                    <div class="detalles">
+                        <span class="peso">20 MB</span>
+                        <span class="fecha">20-11-2026 11:30</span>
+                    </div>
+                    <span class="download-copia">
+                        <i data-lucide="download"></i>
+                        <p>Descargar</p>
+                    </span>
+                </a></li>
+                <li><a href="#">
+                    <span class="check-copia">
+                        <i data-lucide="circle-check-big"></i>
+                    </span>
+                    <div class="detalles">
+                        <span class="peso">20 MB</span>
+                        <span class="fecha">20-11-2026 11:30</span>
+                    </div>
+                    <span class="download-copia">
+                        <i data-lucide="download"></i>
+                        <p>Descargar</p>
+                    </span>
+                </a></li>
+            </ul>
         </div>
     </main>
     <footer>
         <hr>
         @ Gymflow 2026 | <a href="./aviso-legal.html">Aviso Legal y Política de Privacidad</a>
     </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>

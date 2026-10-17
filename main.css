@@ -142,7 +142,7 @@ body {
 .tareas article .card-icon.revisiones {
   color: #FFC300;
   background-color: #3D2708;
-  border: 1px solid #3D2708;
+  border: 0.1px solid #FFC300;
   padding: 10px;
 }
 .tareas article .card-icon.entrevistas {
@@ -202,7 +202,7 @@ body {
 .agenda-item .agenda-icon-revision, .agenda-item .manana-icon-revision, .manana-item .agenda-icon-revision, .manana-item .manana-icon-revision {
   color: #FFC300;
   background-color: #3D2708;
-  border: 1px solid #3D2708;
+  border: 0.1px solid #FFC300;
   padding: 5px;
   border-radius: 10px;
 }
@@ -311,23 +311,23 @@ body {
   text-align: left;
 }
 
-.datos-clientes, .revisiones-vencidas, .revisiones-pendientes, .revisiones-completadas {
+.datos-clientes, .revisiones-vencidas, .revisiones-pendientes, .revisiones-completadas, .historial-copias {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-left: 0;
   padding-left: 0;
 }
-.datos-clientes ul, .revisiones-vencidas ul, .revisiones-pendientes ul, .revisiones-completadas ul {
+.datos-clientes ul, .revisiones-vencidas ul, .revisiones-pendientes ul, .revisiones-completadas ul, .historial-copias ul {
   padding-left: 0;
   margin-top: 25px;
 }
-.datos-clientes ul li, .revisiones-vencidas ul li, .revisiones-pendientes ul li, .revisiones-completadas ul li {
+.datos-clientes ul li, .revisiones-vencidas ul li, .revisiones-pendientes ul li, .revisiones-completadas ul li, .historial-copias ul li {
   width: 100%;
   list-style: none;
   padding-bottom: 10px;
 }
-.datos-clientes ul li a, .revisiones-vencidas ul li a, .revisiones-pendientes ul li a, .revisiones-completadas ul li a {
+.datos-clientes ul li a, .revisiones-vencidas ul li a, .revisiones-pendientes ul li a, .revisiones-completadas ul li a, .historial-copias ul li a {
   text-decoration: none;
   width: 100%;
   color: #FFFFFF;
@@ -338,124 +338,151 @@ body {
   border: 1px solid #333333;
   border-radius: 10px;
 }
-.datos-clientes ul li a:hover, .revisiones-vencidas ul li a:hover, .revisiones-pendientes ul li a:hover, .revisiones-completadas ul li a:hover {
+.datos-clientes ul li a:hover, .revisiones-vencidas ul li a:hover, .revisiones-pendientes ul li a:hover, .revisiones-completadas ul li a:hover, .historial-copias ul li a:hover {
   border: 1px solid #03C5E4;
   transform: translateY(-5px);
 }
-.datos-clientes ul li a:hover .nombre, .revisiones-vencidas ul li a:hover .nombre, .revisiones-pendientes ul li a:hover .nombre, .revisiones-completadas ul li a:hover .nombre {
+.datos-clientes ul li a:hover .nombre, .revisiones-vencidas ul li a:hover .nombre, .revisiones-pendientes ul li a:hover .nombre, .revisiones-completadas ul li a:hover .nombre, .historial-copias ul li a:hover .nombre {
   color: #03C5E4;
 }
-.datos-clientes ul li a div.menu-cliente span, .revisiones-vencidas ul li a div.menu-cliente span, .revisiones-pendientes ul li a div.menu-cliente span, .revisiones-completadas ul li a div.menu-cliente span {
+.datos-clientes ul li a div.menu-cliente span, .revisiones-vencidas ul li a div.menu-cliente span, .revisiones-pendientes ul li a div.menu-cliente span, .revisiones-completadas ul li a div.menu-cliente span, .historial-copias ul li a div.menu-cliente span {
   margin-right: 5px;
 }
-.datos-clientes ul li a .fecha-revision, .revisiones-vencidas ul li a .fecha-revision, .revisiones-pendientes ul li a .fecha-revision, .revisiones-completadas ul li a .fecha-revision {
+.datos-clientes ul li a .fecha-revision, .revisiones-vencidas ul li a .fecha-revision, .revisiones-pendientes ul li a .fecha-revision, .revisiones-completadas ul li a .fecha-revision, .historial-copias ul li a .fecha-revision {
   display: flex;
   flex-direction: row;
   text-align: center;
   align-items: center;
   gap: 10px;
 }
-.datos-clientes ul li a .fecha-revision .ultima-revision, .datos-clientes ul li a .fecha-revision .dia-revision, .revisiones-vencidas ul li a .fecha-revision .ultima-revision, .revisiones-vencidas ul li a .fecha-revision .dia-revision, .revisiones-pendientes ul li a .fecha-revision .ultima-revision, .revisiones-pendientes ul li a .fecha-revision .dia-revision, .revisiones-completadas ul li a .fecha-revision .ultima-revision, .revisiones-completadas ul li a .fecha-revision .dia-revision {
+.datos-clientes ul li a .fecha-revision .ultima-revision, .datos-clientes ul li a .fecha-revision .dia-revision, .revisiones-vencidas ul li a .fecha-revision .ultima-revision, .revisiones-vencidas ul li a .fecha-revision .dia-revision, .revisiones-pendientes ul li a .fecha-revision .ultima-revision, .revisiones-pendientes ul li a .fecha-revision .dia-revision, .revisiones-completadas ul li a .fecha-revision .ultima-revision, .revisiones-completadas ul li a .fecha-revision .dia-revision, .historial-copias ul li a .fecha-revision .ultima-revision, .historial-copias ul li a .fecha-revision .dia-revision {
   display: inline-flex;
   text-align: center;
   align-items: center;
 }
-.datos-clientes ul li a span, .revisiones-vencidas ul li a span, .revisiones-pendientes ul li a span, .revisiones-completadas ul li a span {
+.datos-clientes ul li a .historial-copias, .datos-clientes ul li a span, .revisiones-vencidas ul li a .historial-copias, .revisiones-vencidas ul li a span, .revisiones-pendientes ul li a .historial-copias, .revisiones-pendientes ul li a span, .revisiones-completadas ul li a .historial-copias, .revisiones-completadas ul li a span, .historial-copias ul li a .historial-copias, .historial-copias ul li a span {
   display: inline-flex;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px;
 }
-.datos-clientes ul li a span.activo, .revisiones-vencidas ul li a span.activo, .revisiones-pendientes ul li a span.activo, .revisiones-completadas ul li a span.activo {
+.datos-clientes ul li a .historial-copias.activo, .datos-clientes ul li a span.activo, .revisiones-vencidas ul li a .historial-copias.activo, .revisiones-vencidas ul li a span.activo, .revisiones-pendientes ul li a .historial-copias.activo, .revisiones-pendientes ul li a span.activo, .revisiones-completadas ul li a .historial-copias.activo, .revisiones-completadas ul li a span.activo, .historial-copias ul li a .historial-copias.activo, .historial-copias ul li a span.activo {
   color: #2ed573;
   border-radius: 10px;
   border: 1px solid rgba(46, 213, 115, 0.3);
   background-color: rgba(46, 213, 115, 0.15);
+  align-items: center;
 }
-.datos-clientes ul li a span.inactivo, .revisiones-vencidas ul li a span.inactivo, .revisiones-pendientes ul li a span.inactivo, .revisiones-completadas ul li a span.inactivo {
+.datos-clientes ul li a .historial-copias.check-copia, .datos-clientes ul li a span.check-copia, .revisiones-vencidas ul li a .historial-copias.check-copia, .revisiones-vencidas ul li a span.check-copia, .revisiones-pendientes ul li a .historial-copias.check-copia, .revisiones-pendientes ul li a span.check-copia, .revisiones-completadas ul li a .historial-copias.check-copia, .revisiones-completadas ul li a span.check-copia, .historial-copias ul li a .historial-copias.check-copia, .historial-copias ul li a span.check-copia {
+  color: #2ed573;
+  border-radius: 10px;
+  border: 1px solid rgba(46, 213, 115, 0.3);
+  background-color: rgba(46, 213, 115, 0.15);
+  align-items: center;
+  padding: 20px;
+}
+.datos-clientes ul li a .historial-copias.inactivo, .datos-clientes ul li a span.inactivo, .revisiones-vencidas ul li a .historial-copias.inactivo, .revisiones-vencidas ul li a span.inactivo, .revisiones-pendientes ul li a .historial-copias.inactivo, .revisiones-pendientes ul li a span.inactivo, .revisiones-completadas ul li a .historial-copias.inactivo, .revisiones-completadas ul li a span.inactivo, .historial-copias ul li a .historial-copias.inactivo, .historial-copias ul li a span.inactivo {
   color: #ff4757;
   border-radius: 10px;
   border: 1px solid rgba(255, 71, 87, 0.3);
   background-color: rgba(255, 71, 87, 0.15);
 }
-.datos-clientes ul li a span.objetivo, .revisiones-vencidas ul li a span.objetivo, .revisiones-pendientes ul li a span.objetivo, .revisiones-completadas ul li a span.objetivo {
+.datos-clientes ul li a .historial-copias.objetivo, .datos-clientes ul li a span.objetivo, .revisiones-vencidas ul li a .historial-copias.objetivo, .revisiones-vencidas ul li a span.objetivo, .revisiones-pendientes ul li a .historial-copias.objetivo, .revisiones-pendientes ul li a span.objetivo, .revisiones-completadas ul li a .historial-copias.objetivo, .revisiones-completadas ul li a span.objetivo, .historial-copias ul li a .historial-copias.objetivo, .historial-copias ul li a span.objetivo {
   background-color: #333333;
   border: 1px solid #333333;
   border-radius: 10px;
   margin-left: 10px;
 }
-.datos-clientes ul li a span.pendiente, .revisiones-vencidas ul li a span.pendiente, .revisiones-pendientes ul li a span.pendiente, .revisiones-completadas ul li a span.pendiente {
+.datos-clientes ul li a .historial-copias.pendiente, .datos-clientes ul li a span.pendiente, .revisiones-vencidas ul li a .historial-copias.pendiente, .revisiones-vencidas ul li a span.pendiente, .revisiones-pendientes ul li a .historial-copias.pendiente, .revisiones-pendientes ul li a span.pendiente, .revisiones-completadas ul li a .historial-copias.pendiente, .revisiones-completadas ul li a span.pendiente, .historial-copias ul li a .historial-copias.pendiente, .historial-copias ul li a span.pendiente {
   color: #FFC300;
   border-radius: 10px;
-  border: 1px solid #3D2708;
+  border: 0.1px solid #FFC300;
   background-color: #3D2708;
 }
-.datos-clientes ul li a span.ver-cliente, .datos-clientes ul li a span.notificar-revision, .revisiones-vencidas ul li a span.ver-cliente, .revisiones-vencidas ul li a span.notificar-revision, .revisiones-pendientes ul li a span.ver-cliente, .revisiones-pendientes ul li a span.notificar-revision, .revisiones-completadas ul li a span.ver-cliente, .revisiones-completadas ul li a span.notificar-revision {
+.datos-clientes ul li a .historial-copias.ver-cliente, .datos-clientes ul li a .historial-copias.notificar-revision, .datos-clientes ul li a span.ver-cliente, .datos-clientes ul li a span.notificar-revision, .revisiones-vencidas ul li a .historial-copias.ver-cliente, .revisiones-vencidas ul li a .historial-copias.notificar-revision, .revisiones-vencidas ul li a span.ver-cliente, .revisiones-vencidas ul li a span.notificar-revision, .revisiones-pendientes ul li a .historial-copias.ver-cliente, .revisiones-pendientes ul li a .historial-copias.notificar-revision, .revisiones-pendientes ul li a span.ver-cliente, .revisiones-pendientes ul li a span.notificar-revision, .revisiones-completadas ul li a .historial-copias.ver-cliente, .revisiones-completadas ul li a .historial-copias.notificar-revision, .revisiones-completadas ul li a span.ver-cliente, .revisiones-completadas ul li a span.notificar-revision, .historial-copias ul li a .historial-copias.ver-cliente, .historial-copias ul li a .historial-copias.notificar-revision, .historial-copias ul li a span.ver-cliente, .historial-copias ul li a span.notificar-revision {
   color: #03C5E4;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.ver-cliente:hover, .datos-clientes ul li a span.notificar-revision:hover, .revisiones-vencidas ul li a span.ver-cliente:hover, .revisiones-vencidas ul li a span.notificar-revision:hover, .revisiones-pendientes ul li a span.ver-cliente:hover, .revisiones-pendientes ul li a span.notificar-revision:hover, .revisiones-completadas ul li a span.ver-cliente:hover, .revisiones-completadas ul li a span.notificar-revision:hover {
+.datos-clientes ul li a .historial-copias.ver-cliente:hover, .datos-clientes ul li a .historial-copias.notificar-revision:hover, .datos-clientes ul li a span.ver-cliente:hover, .datos-clientes ul li a span.notificar-revision:hover, .revisiones-vencidas ul li a .historial-copias.ver-cliente:hover, .revisiones-vencidas ul li a .historial-copias.notificar-revision:hover, .revisiones-vencidas ul li a span.ver-cliente:hover, .revisiones-vencidas ul li a span.notificar-revision:hover, .revisiones-pendientes ul li a .historial-copias.ver-cliente:hover, .revisiones-pendientes ul li a .historial-copias.notificar-revision:hover, .revisiones-pendientes ul li a span.ver-cliente:hover, .revisiones-pendientes ul li a span.notificar-revision:hover, .revisiones-completadas ul li a .historial-copias.ver-cliente:hover, .revisiones-completadas ul li a .historial-copias.notificar-revision:hover, .revisiones-completadas ul li a span.ver-cliente:hover, .revisiones-completadas ul li a span.notificar-revision:hover, .historial-copias ul li a .historial-copias.ver-cliente:hover, .historial-copias ul li a .historial-copias.notificar-revision:hover, .historial-copias ul li a span.ver-cliente:hover, .historial-copias ul li a span.notificar-revision:hover {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
-.datos-clientes ul li a span.editar-cliente, .revisiones-vencidas ul li a span.editar-cliente, .revisiones-pendientes ul li a span.editar-cliente, .revisiones-completadas ul li a span.editar-cliente {
+.datos-clientes ul li a .historial-copias.editar-cliente, .datos-clientes ul li a span.editar-cliente, .revisiones-vencidas ul li a .historial-copias.editar-cliente, .revisiones-vencidas ul li a span.editar-cliente, .revisiones-pendientes ul li a .historial-copias.editar-cliente, .revisiones-pendientes ul li a span.editar-cliente, .revisiones-completadas ul li a .historial-copias.editar-cliente, .revisiones-completadas ul li a span.editar-cliente, .historial-copias ul li a .historial-copias.editar-cliente, .historial-copias ul li a span.editar-cliente {
   color: #D710FF;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.editar-cliente:hover, .revisiones-vencidas ul li a span.editar-cliente:hover, .revisiones-pendientes ul li a span.editar-cliente:hover, .revisiones-completadas ul li a span.editar-cliente:hover {
+.datos-clientes ul li a .historial-copias.editar-cliente:hover, .datos-clientes ul li a span.editar-cliente:hover, .revisiones-vencidas ul li a .historial-copias.editar-cliente:hover, .revisiones-vencidas ul li a span.editar-cliente:hover, .revisiones-pendientes ul li a .historial-copias.editar-cliente:hover, .revisiones-pendientes ul li a span.editar-cliente:hover, .revisiones-completadas ul li a .historial-copias.editar-cliente:hover, .revisiones-completadas ul li a span.editar-cliente:hover, .historial-copias ul li a .historial-copias.editar-cliente:hover, .historial-copias ul li a span.editar-cliente:hover {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
-.datos-clientes ul li a span.mensaje-cliente, .datos-clientes ul li a span.revision-hecha, .revisiones-vencidas ul li a span.mensaje-cliente, .revisiones-vencidas ul li a span.revision-hecha, .revisiones-pendientes ul li a span.mensaje-cliente, .revisiones-pendientes ul li a span.revision-hecha, .revisiones-completadas ul li a span.mensaje-cliente, .revisiones-completadas ul li a span.revision-hecha {
+.datos-clientes ul li a .historial-copias.mensaje-cliente, .datos-clientes ul li a .historial-copias.revision-hecha, .datos-clientes ul li a span.mensaje-cliente, .datos-clientes ul li a span.revision-hecha, .revisiones-vencidas ul li a .historial-copias.mensaje-cliente, .revisiones-vencidas ul li a .historial-copias.revision-hecha, .revisiones-vencidas ul li a span.mensaje-cliente, .revisiones-vencidas ul li a span.revision-hecha, .revisiones-pendientes ul li a .historial-copias.mensaje-cliente, .revisiones-pendientes ul li a .historial-copias.revision-hecha, .revisiones-pendientes ul li a span.mensaje-cliente, .revisiones-pendientes ul li a span.revision-hecha, .revisiones-completadas ul li a .historial-copias.mensaje-cliente, .revisiones-completadas ul li a .historial-copias.revision-hecha, .revisiones-completadas ul li a span.mensaje-cliente, .revisiones-completadas ul li a span.revision-hecha, .historial-copias ul li a .historial-copias.mensaje-cliente, .historial-copias ul li a .historial-copias.revision-hecha, .historial-copias ul li a span.mensaje-cliente, .historial-copias ul li a span.revision-hecha {
   color: #2ed573;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.mensaje-cliente:hover, .datos-clientes ul li a span.revision-hecha:hover, .revisiones-vencidas ul li a span.mensaje-cliente:hover, .revisiones-vencidas ul li a span.revision-hecha:hover, .revisiones-pendientes ul li a span.mensaje-cliente:hover, .revisiones-pendientes ul li a span.revision-hecha:hover, .revisiones-completadas ul li a span.mensaje-cliente:hover, .revisiones-completadas ul li a span.revision-hecha:hover {
+.datos-clientes ul li a .historial-copias.mensaje-cliente:hover, .datos-clientes ul li a .historial-copias.revision-hecha:hover, .datos-clientes ul li a span.mensaje-cliente:hover, .datos-clientes ul li a span.revision-hecha:hover, .revisiones-vencidas ul li a .historial-copias.mensaje-cliente:hover, .revisiones-vencidas ul li a .historial-copias.revision-hecha:hover, .revisiones-vencidas ul li a span.mensaje-cliente:hover, .revisiones-vencidas ul li a span.revision-hecha:hover, .revisiones-pendientes ul li a .historial-copias.mensaje-cliente:hover, .revisiones-pendientes ul li a .historial-copias.revision-hecha:hover, .revisiones-pendientes ul li a span.mensaje-cliente:hover, .revisiones-pendientes ul li a span.revision-hecha:hover, .revisiones-completadas ul li a .historial-copias.mensaje-cliente:hover, .revisiones-completadas ul li a .historial-copias.revision-hecha:hover, .revisiones-completadas ul li a span.mensaje-cliente:hover, .revisiones-completadas ul li a span.revision-hecha:hover, .historial-copias ul li a .historial-copias.mensaje-cliente:hover, .historial-copias ul li a .historial-copias.revision-hecha:hover, .historial-copias ul li a span.mensaje-cliente:hover, .historial-copias ul li a span.revision-hecha:hover {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
-.datos-clientes ul li a span.eliminar-cliente, .revisiones-vencidas ul li a span.eliminar-cliente, .revisiones-pendientes ul li a span.eliminar-cliente, .revisiones-completadas ul li a span.eliminar-cliente {
+.datos-clientes ul li a .historial-copias.eliminar-cliente, .datos-clientes ul li a span.eliminar-cliente, .revisiones-vencidas ul li a .historial-copias.eliminar-cliente, .revisiones-vencidas ul li a span.eliminar-cliente, .revisiones-pendientes ul li a .historial-copias.eliminar-cliente, .revisiones-pendientes ul li a span.eliminar-cliente, .revisiones-completadas ul li a .historial-copias.eliminar-cliente, .revisiones-completadas ul li a span.eliminar-cliente, .historial-copias ul li a .historial-copias.eliminar-cliente, .historial-copias ul li a span.eliminar-cliente {
   color: #ff4757;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.eliminar-cliente:hover, .revisiones-vencidas ul li a span.eliminar-cliente:hover, .revisiones-pendientes ul li a span.eliminar-cliente:hover, .revisiones-completadas ul li a span.eliminar-cliente:hover {
+.datos-clientes ul li a .historial-copias.eliminar-cliente:hover, .datos-clientes ul li a span.eliminar-cliente:hover, .revisiones-vencidas ul li a .historial-copias.eliminar-cliente:hover, .revisiones-vencidas ul li a span.eliminar-cliente:hover, .revisiones-pendientes ul li a .historial-copias.eliminar-cliente:hover, .revisiones-pendientes ul li a span.eliminar-cliente:hover, .revisiones-completadas ul li a .historial-copias.eliminar-cliente:hover, .revisiones-completadas ul li a span.eliminar-cliente:hover, .historial-copias ul li a .historial-copias.eliminar-cliente:hover, .historial-copias ul li a span.eliminar-cliente:hover {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
-.datos-clientes ul li a span.informe, .revisiones-vencidas ul li a span.informe, .revisiones-pendientes ul li a span.informe, .revisiones-completadas ul li a span.informe {
+.datos-clientes ul li a .historial-copias.informe, .datos-clientes ul li a span.informe, .revisiones-vencidas ul li a .historial-copias.informe, .revisiones-vencidas ul li a span.informe, .revisiones-pendientes ul li a .historial-copias.informe, .revisiones-pendientes ul li a span.informe, .revisiones-completadas ul li a .historial-copias.informe, .revisiones-completadas ul li a span.informe, .historial-copias ul li a .historial-copias.informe, .historial-copias ul li a span.informe {
   color: #FFFFFF;
   border-radius: 10px;
   border: 1px solid #333333;
   background-color: #0A0A0A;
 }
-.datos-clientes ul li a span.informe:hover, .revisiones-vencidas ul li a span.informe:hover, .revisiones-pendientes ul li a span.informe:hover, .revisiones-completadas ul li a span.informe:hover {
+.datos-clientes ul li a .historial-copias.informe:hover, .datos-clientes ul li a span.informe:hover, .revisiones-vencidas ul li a .historial-copias.informe:hover, .revisiones-vencidas ul li a span.informe:hover, .revisiones-pendientes ul li a .historial-copias.informe:hover, .revisiones-pendientes ul li a span.informe:hover, .revisiones-completadas ul li a .historial-copias.informe:hover, .revisiones-completadas ul li a span.informe:hover, .historial-copias ul li a .historial-copias.informe:hover, .historial-copias ul li a span.informe:hover {
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
 }
+.datos-clientes ul li a .historial-copias.peso, .datos-clientes ul li a span.peso, .revisiones-vencidas ul li a .historial-copias.peso, .revisiones-vencidas ul li a span.peso, .revisiones-pendientes ul li a .historial-copias.peso, .revisiones-pendientes ul li a span.peso, .revisiones-completadas ul li a .historial-copias.peso, .revisiones-completadas ul li a span.peso, .historial-copias ul li a .historial-copias.peso, .historial-copias ul li a span.peso {
+  padding-right: 150px;
+  padding-top: 25px;
+}
+.datos-clientes ul li a .historial-copias.download-copia, .datos-clientes ul li a span.download-copia, .revisiones-vencidas ul li a .historial-copias.download-copia, .revisiones-vencidas ul li a span.download-copia, .revisiones-pendientes ul li a .historial-copias.download-copia, .revisiones-pendientes ul li a span.download-copia, .revisiones-completadas ul li a .historial-copias.download-copia, .revisiones-completadas ul li a span.download-copia, .historial-copias ul li a .historial-copias.download-copia, .historial-copias ul li a span.download-copia {
+  color: #00d2ff;
+  background-color: rgba(0, 210, 255, 0.15);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  border-radius: 10px;
+  margin-left: 200px;
+  align-items: center;
+  gap: 20px;
+}
+.datos-clientes ul li a .historial-copias.download-copia:hover, .datos-clientes ul li a span.download-copia:hover, .revisiones-vencidas ul li a .historial-copias.download-copia:hover, .revisiones-vencidas ul li a span.download-copia:hover, .revisiones-pendientes ul li a .historial-copias.download-copia:hover, .revisiones-pendientes ul li a span.download-copia:hover, .revisiones-completadas ul li a .historial-copias.download-copia:hover, .revisiones-completadas ul li a span.download-copia:hover, .historial-copias ul li a .historial-copias.download-copia:hover, .historial-copias ul li a span.download-copia:hover {
+  border: 1px solid #03C5E4;
+  box-shadow: 0px 3px 3px #03C5E4;
+  color: #FFFFFF;
+}
 
-.inicio-entrevistas, .inicio-revisiones {
+.inicio-entrevistas, .inicio-revisiones, .inicio-copia-seguridad {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 25px;
 }
-.inicio-entrevistas h2, .inicio-revisiones h2 {
+.inicio-entrevistas h2, .inicio-revisiones h2, .inicio-copia-seguridad h2 {
   color: #FFFFFF;
   margin-left: 5px;
 }
-.inicio-entrevistas h2 span, .inicio-revisiones h2 span {
+.inicio-entrevistas h2 span, .inicio-revisiones h2 span, .inicio-copia-seguridad h2 span {
   color: #03C5E4;
 }
 
@@ -518,7 +545,13 @@ body {
 .panel-entrevistas article .card-icon.revisiones, .panel-revisiones article .card-icon.revisiones {
   color: #FFC300;
   background-color: #3D2708;
-  border: 1px solid #3D2708;
+  border: 0.1px solid #FFC300;
+  padding: 10px;
+}
+.panel-entrevistas article .card-icon.entrevistas, .panel-revisiones article .card-icon.entrevistas {
+  color: #D710FF;
+  background-color: #30083D;
+  border: 1px solid #D710FF;
   padding: 10px;
 }
 .panel-entrevistas article .card-info, .panel-revisiones article .card-info {
@@ -607,7 +640,7 @@ body {
 .datos-entrevistas ul li a span.pendiente, .entrevistas-completadas ul li a span.pendiente {
   color: #FFC300;
   border-radius: 10px;
-  border: 1px solid #3D2708;
+  border: 0.1px solid #FFC300;
   background-color: #3D2708;
 }
 .datos-entrevistas ul li a span.reevaluacion, .datos-entrevistas ul li a span.completada, .entrevistas-completadas ul li a span.reevaluacion, .entrevistas-completadas ul li a span.completada {
@@ -662,6 +695,110 @@ body {
   color: #FFFFFF;
   border: 1px solid #03C5E4;
   box-shadow: 0px 4px 4px #03C5E4;
+}
+
+.panel-copia {
+  padding-top: 40px;
+  padding-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+}
+.panel-copia .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  color: #707070;
+  width: 95%;
+  text-align: left;
+  font-size: 25px;
+  align-self: center;
+  align-items: left;
+  margin-left: 20px;
+}
+.panel-copia .card:hover {
+  border: 1px solid #03C5E4;
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 4px #03C5E4;
+  cursor: pointer;
+}
+.panel-copia .card.total {
+  color: #00d2ff;
+  background-color: rgba(0, 210, 255, 0.15);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  padding: 10px;
+  padding-left: 25px;
+}
+.panel-copia .card.activo {
+  color: #2ed573;
+  background-color: rgba(46, 213, 115, 0.15);
+  border: 1px solid rgba(46, 213, 115, 0.3);
+  padding: 10px;
+  padding-left: 25px;
+}
+.panel-copia .card.inactivo {
+  color: #ff4757;
+  background-color: rgba(255, 71, 87, 0.15);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  padding: 10px;
+  padding-left: 25px;
+}
+.panel-copia .card.revisiones {
+  color: #FFC300;
+  background-color: #3D2708;
+  border: 0.1px solid #FFC300;
+  padding: 10px;
+  padding-left: 25px;
+}
+.panel-copia .card.entrevistas {
+  color: #D710FF;
+  background-color: #30083D;
+  border: 1px solid #D710FF;
+  padding: 10px;
+  padding-left: 25px;
+}
+.panel-copia .card .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.panel-copia .card .card-info .card-title {
+  font-size: 1.3rem;
+}
+.panel-copia .card .card-info .card-number {
+  font-size: 1.1rem;
+  text-align: left;
+}
+.panel-copia .btn {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  gap: 15px;
+  margin-left: 25px;
+  color: #0A0A0A;
+  background-color: #00d2ff;
+  padding: 10px;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: 0px 1px 1px #03C5E4;
+}
+.panel-copia .btn:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+.panel-copia .btn p {
+  font-size: 1rem;
 }
 
 .buscar-clientes {

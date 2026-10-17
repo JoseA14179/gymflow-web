@@ -259,7 +259,7 @@ body {
 
 
 
-.datos-clientes , .revisiones-vencidas , .revisiones-pendientes , .revisiones-completadas {
+.datos-clientes , .revisiones-vencidas , .revisiones-pendientes , .revisiones-completadas, .historial-copias {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -315,7 +315,7 @@ body {
                 }
             }
 
-            span {
+            .historial-copias, span {
                 display: inline-flex;
                 width: fit-content;
                 padding: $spacing-s;
@@ -325,6 +325,16 @@ body {
                     border-radius: $radius-main;
                     border: $border-activo;
                     background-color: $color-bg-activo;
+                    align-items: center;
+                }
+
+                &.check-copia {
+                    color: $color-activo;
+                    border-radius: $radius-main;
+                    border: $border-activo;
+                    background-color: $color-bg-activo;
+                    align-items: center;
+                    padding: $spacing-l;
                 }
 
                 &.inactivo {
@@ -411,6 +421,27 @@ body {
                         box-shadow: 0px 4px 4px $color-hover;
                     }
                 }
+
+                &.peso {
+                    padding-right: 150px;
+                    padding-top: $spacing-xl;
+                }
+
+                &.download-copia {
+                    color: $color-total;
+                    background-color: $color-bg-total;
+                    border: $border-total;
+                    border-radius: $radius-main;
+                    margin-left: 200px;
+                    align-items: center;
+                    gap: $spacing-l;
+
+                    &:hover {
+                        border: $border-active;
+                        box-shadow: 0px 3px 3px $color-hover;
+                        color: $color-text;
+                    }
+                }
             }
         }
     }
@@ -421,7 +452,7 @@ body {
 
 
 
-.inicio-entrevistas,  .inicio-revisiones {
+.inicio-entrevistas,  .inicio-revisiones, .inicio-copia-seguridad {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -502,6 +533,13 @@ body {
                 color: $color-revisiones;
                 background-color: $color-bg-revisiones;
                 border: $border-revisiones;
+                padding: $spacing-s;
+            }
+
+            &.entrevistas {
+                color: $color-entrevistas;
+                background-color: $color-bg-entrevistas;
+                border: $border-entrevistas;
                 padding: $spacing-s;
             }
         }
@@ -677,5 +715,124 @@ body {
             }
         }
     }
+    }
+}
+
+
+
+
+
+.panel-copia {
+    padding-top: 40px;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    gap: $spacing-l;
+    border: 1px solid $color-tareas;
+    border-radius: $radius-main;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: $spacing-s;
+        border: $border-card;
+        border-radius: 20px;
+        color: $color-tareas;
+        width: 95%;
+        text-align: left;
+        font-size: $spacing-xl;
+        align-self: center;
+        align-items: left;
+        margin-left: $spacing-l;
+
+        &:hover {
+            border: $border-active;
+            transform: translateY(-$spacing-xs);
+            box-shadow: 0px 4px 4px $color-hover;
+            cursor: pointer;
+        }
+
+            &.total {
+                color: $color-total;
+                background-color: $color-bg-total;
+                border: $border-total;
+                padding: $spacing-s;
+                padding-left: $spacing-xl;
+            }
+
+            &.activo {
+                color: $color-activo;
+                background-color: $color-bg-activo;
+                border: $border-activo;
+                padding: $spacing-s;
+                padding-left: $spacing-xl;
+            }
+
+            &.inactivo {
+                color: $color-inactivo;
+                background-color: $color-bg-inactivo;
+                border: $border-inactivo;
+                padding: $spacing-s;
+                padding-left: $spacing-xl;
+            }
+
+            &.revisiones {
+                color: $color-revisiones;
+                background-color: $color-bg-revisiones;
+                border: $border-revisiones;
+                padding: $spacing-s;
+                padding-left: $spacing-xl;
+            }
+
+            &.entrevistas {
+                color: $color-entrevistas;
+                background-color: $color-bg-entrevistas;
+                border: $border-entrevistas;
+                padding: $spacing-s;
+                padding-left: $spacing-xl;
+            }
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-s;
+
+            .card-title {
+                font-size: 1.3rem;
+            }
+
+            .card-number {
+                font-size: 1.1rem;
+                text-align: left;
+            }
+        }
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        gap: $spacing-m;
+        margin-left: $spacing-xl;
+        color: $color-bg-main;
+        background-color: $color-total;
+        padding: $spacing-s;
+        border-radius: $radius-main;
+        width: fit-content;
+        box-shadow: 0px 1px 1px $color-hover;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-$spacing-xs);
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 }
