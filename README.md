@@ -1,41 +1,74 @@
-# 🏋️‍♂️ GymFlow-Web — Fitness & Workout Management Web App
+# 🏋️‍♂️ GymFlow-Web — Personal Trainer Management System
 
-> Sistema modular de gestión de rutinas, seguimiento de clientes y organización de entrenamientos.
+> Sistema modular e intuitivo para la gestión integral de clientes, sesiones y métricas de entrenamiento personal.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
 ## 📌 Sobre el Proyecto
 
-**GymFlow** es una aplicación web pensada para entrenadores personales y gimnasios que buscan organizar sus contenidos, agendas diarias, paneles de clientes y revisiones semanales de forma intuitiva, ágil y visual.
+**GymFlow** es una plataforma web desarrollada para entrenadores personales que buscan centralizar la gestión operativa de sus clientes, planificar entrenamientos, realizar seguimiento de revisiones y controlar la evolución de su negocio.
 
-Diseñada con un enfoque **Mobile-First** e interfaz oscura (*Dark Mode*) de alta energía, la plataforma optimiza el flujo de trabajo diario centralizando las tareas operativas en una sola vista.
+Diseñada con un enfoque **Dark Mode** moderno, rápido y fluido, la aplicación combina una maquetación en **Sass modular** con una capa de lógica fuertemente tipada en **TypeScript**, garantizando un desarrollo robusto, limpio y escalable.
 
 ---
 
 ## ✨ Características Principales
 
-* 📊 **Dashboard General:** Resumen visual de revisiones, entrevistas y sesiones del día.
-* 👥 **Gestión de Clientes:** Seguimiento personalizado de rutinas y fichas técnicas.
-* 📅 **Agenda Inteligente:** Organización de tareas divididas por franjas horarias (Mañana/Tarde).
-* 🎨 **UI Reutilizable:** Diseño basado en componentes interactivos con estados `:hover` y `:active` optimizados.
+* 👥 **Gestión de Clientes (CRUD):** Visualización, filtrado dinámico y control de fichas de clientes en tiempo real.
+* 💾 **Persistencia de Datos Local:** Gestión de estados y almacenamiento seguro mediante `LocalStorage` e interfaces estrictas en TypeScript.
+* 📊 **Dashboard & Métricas:** Paneles informativos con resúmenes estadísticos (clientes totales, activos e inactivos).
+* 🔍 **Buscador en Tiempo Real:** Filtro rápido por nombre o atributos sin necesidad de recargar la página.
+* 🎨 **Arquitectura CSS Scalable:** Interfaz moderna maquetada en Sass con estados interactivos optimizados (`:hover`, `:active`).
 
 ---
 
-## 🛠️ Arquitectura y Tecnologías
+## 🛠️ Estructura del Proyecto
 
-El proyecto ha sido refactorizado desde CSS plano hacia una **arquitectura SASS modular (Pattern 7-1 simplified)** para garantizar un código limpio, mantenible y escalable:
+El sistema está organizado bajo patrones de diseño modulares para separar la arquitectura visual (CSS/Sass) de la lógica de negocio (TypeScript/JS):
 
 ```text
 gymflow-web/
-├── html/                      # Páginas secundarias del sistema
-├── assets/                    # Recursos estáticos (imágenes, fuentes, SVG)
-└── scss/                      # Código fuente SASS
-    ├── base/                  # Reset, variables globales y tipografía
-    ├── components/            # Componentes UI (Cards, Botones, Formularios)
-    ├── layout/                # Navegación, Header, Sidebar y Footer
-    └── main.scss              # Compilador principal
+├── html/                      # Páginas secundarias del sistema (Clientes, Revisiones, Finanzas...)
+├── img/                       # Iconos vectoriales (SVG) y recursos visuales
+├── scss/                      # Estructura Sass modular (7-1 pattern simplificado)
+│   ├── base/                  # Reset, variables globales y tipografía
+│   ├── components/            # Componentes reutilizables (Cards, Botones, Formularios)
+│   └── layout/                # Navegación, Header y Footer
+├── ts/                        # Código fuente TypeScript
+│   ├── types/                 # Definición de tipos e Interfaces (client.types.ts)
+│   ├── services/              # Capa de servicios (storage.service.ts)
+│   └── clientes.ts            # Lógica dinámica y manipulación del DOM
+├── js/                        # Archivos JavaScript compilados (salida de tsc)
+├── main.css                   # CSS final compilado
+├── index.html                 # Vista principal / Dashboard
+└── tsconfig.json              # Configuración del compilador TypeScript
+```
+
+---
+
+## 🚀 Instalación y Desarrollo Local
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/tu-usuario/gymflow-web.git
+   cd gymflow-web
+   ```
+
+2. **Compilar los estilos Sass (modo vigilancia):**
+   ```bash
+   sass --watch scss/main.scss main.css
+   ```
+
+3. **Compilar TypeScript en modo vigilancia (Watch mode):**
+   ```bash
+   tsc -w
+   ```
+
+4. **Ejecución:** Abre el archivo `index.html` o `html/clientes.html` directamente en tu navegador o utilizando la extensión **Live Server**.
