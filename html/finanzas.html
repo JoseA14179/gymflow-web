@@ -35,44 +35,117 @@
     </header>
     <main>
         <input type="checkbox" name="plan-mensual" id="plan-mensual" checked>Mensual <input type="checkbox" name="plan-anual" id="plan-anual">Anual
-        <br>
-        <br>
-        <div>
-            <article>Básico</article>
-            <br>
-            <article>Pro</article>
-            <br>
-            <article>Élite</article>
+        <div class="panel-finanzas">
+            <article>
+                <i class="card-icon total" data-lucide="users"></i>
+                <div class="card-info">
+                    <span class="card-title">Ingresos</span>
+                    <span class="card-number">570 $</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon activo" data-lucide="users"></i>
+                <div class="card-info">
+                    <span class="card-title">Gastos</span>
+                    <span class="card-number">250 $</span>
+                </div>
+            </article>
+            <article>
+                <i class="card-icon inactivo" data-lucide="users"></i>
+                <div class="card-info">
+                    <span class="card-title">Beneficio</span>
+                    <span class="card-number">320 $</span>
+                </div>
+            </article>
         </div>
-        <br>
-        <div>
+        <div class="panel-gastos">
             <h3>💳 Método de pago</h3>
             <ul>
-                <li><a href="">Apple Pay</a></li>
-                <br>
-                <li><a href="">Google Pay</a></li>
-                <br>
-                <li><a href="">PayPal</a></li>
-                <br>
-                <li><a href="">Transferencia bancaria</a></li>
-                <br>
-                <li><a href="">Tarjeta de crédito/débito</a></li>
+                <li><a href="">
+                    <div class="nombre">
+                        <span>Material gimnasio</span>
+                    </div>
+                    <div class="detalles">
+                        <span class="asunto-gasto">
+                            equipamiento
+                        </span>
+                        <span class="fecha">
+                            01/12/2026
+                        </span>
+                    </div>
+                    <div class="precio-gasto">
+                        <span>-150 $</span>
+                    </div>
+                </a></li>
             </ul>
         </div>
-        <br>
-        <div>
-            <h3>📝 Facturas</h3>
+        <div class="panel-facturas">
+            <h3>Facturas</h3>
             <ul>
-                <li><a href="">Plan pro - Diciembre 2024</a></li>
-                <br>
-                <li><a href="">Plan pro - Diciembre 2025</a></li>
-                <br>
+                <li><a href="">
+                    <div class="nombre">
+                        <span>Luis Rodriguez</span>
+                    </div>
+                    <div class="detalles">
+                        <span class="asunto-factura">
+                            Pago mensual - Diciembre
+                        </span>
+                        <span class="fecha">
+                            01/12/2026
+                        </span>
+                    </div>
+                    <div class="opciones-factura">
+                        <span class="precio-factura">
+                            <p>150 $</p>
+                            <i data-lucide="download"></i>
+                        </span>
+                        <span class="estado-factura">Cobrada</span>
+                    </div>
+                </a></li>
+                <li><a href="">
+                    <div class="nombre">
+                        <span>Luis Rodriguez</span>
+                    </div>
+                    <div class="detalles">
+                        <span class="asunto-factura">
+                            Pago mensual - Diciembre
+                        </span>
+                        <span class="fecha">
+                            01/12/2026
+                        </span>
+                    </div>
+                    <div class="opciones-factura">
+                        <span class="precio-factura">
+                            <p>150 $</p>
+                            <i data-lucide="download"></i>
+                        </span>
+                        <span class="estado-factura">Pendiente</span>
+                    </div>
+                </a></li>
+                <li><a href="">
+                    <div class="nombre">
+                        <span>Luis Rodriguez</span>
+                    </div>
+                    <div class="detalles">
+                        <span class="asunto-factura">
+                            Pago mensual - Diciembre
+                        </span>
+                        <span class="fecha">
+                            01/12/2026
+                        </span>
+                    </div>
+                    <div class="opciones-factura">
+                        <span class="precio-factura">
+                            <p>150 $</p>
+                            <i data-lucide="download"></i>
+                        </span>
+                        <span class="estado-factura">Vencida</span>
+                    </div>
+                </a></li>
             </ul>
         </div>
     </main>
     <footer>
-        <br>
-        <br>
         <hr>
         @ Gymflow 2026 | <a href="aviso-legal.html">Aviso Legal y Política de Privacidad</a>
     </footer>
